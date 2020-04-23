@@ -5,9 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import navItems from '../../data/navItems';
 import navSocials from '../../data/navSocials';
 
+import LocaleSwitcher from '../LocaleSwitcher';
+
 const menuItems = navItems;
 const socialItems = navSocials;
-
 
 const useStyles = makeStyles({
   navigation: {
@@ -114,21 +115,17 @@ const getMenuChildren = (name, menuChildren, menuColor) => {
   )
 }
 
-
-
-
 const NavDesktop = props => {
   const classes = useStyles();
   return (
     <div className={classes.navigation} id="navigation">
-      
       <Link href="/">
         <div className={classes.logoContainer}>
           <img className={classes.logo} src="/ikigai-dark.svg" />
-            <Typography className={classes.logoText} style={{color: props.menuColor}}>Worley Digital</Typography>
-          </div>
-        </Link>
-
+          <Typography className={classes.logoText} style={{color: props.menuColor}}>Worley Digital</Typography>
+        </div>
+      </Link>
+      <LocaleSwitcher />
       <div className={classes.navRight}>
         <ul className={classes.list}>
           {menuItems.map(menuItem => (
@@ -148,15 +145,9 @@ const NavDesktop = props => {
               ))}
             </ul>
         </div>
-
       </div>
     </div>
-
   )
 };
-
-
-
-
 
 export default NavDesktop;
