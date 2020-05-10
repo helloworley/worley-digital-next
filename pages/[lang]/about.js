@@ -1,13 +1,23 @@
+// react
+import React from 'react'
+
+// material ui
 import { Grid, Button, Typography } from '@material-ui/core/';
+import { makeStyles } from '@material-ui/core/styles';
+
+// next
+import Link from 'next/link';
 
 // translation
 import useTranslation from '../../hooks/useTranslation';
 import withLocale from '../../hocs/withLocale';
+import { LocaleContext } from '../../context/LocaleContext';
+
 
 // custom
 import Layout from '../../components/MyLayout';
-import BubbleWindow from '../../components/BubbleWindow';
-import { makeStyles } from '@material-ui/core/styles';
+import Hero from '../../components/Layout/Hero';
+import ServicesOffered from '../../components/Layout/ServicesOffered';
 
 // data
 import servicesOffered from '../../data/servicesOffered';
@@ -49,7 +59,6 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.up('md')]: {
       backgroundSize: 'cover',
-      height: '90vh',
     },
     [theme.breakpoints.up('lg')]: {
       padding: '0',
@@ -67,51 +76,24 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const BubbleWindows = servicesOffered.map( serviceOffered => {
-  return (
-    <Grid item xs={6} sm={4}>
-      <BubbleWindow text={serviceOffered.en} bg={serviceOffered.image}/>
-    </Grid>
-  )
-});
-
-
-
 const Index = () => {
   const classes = useStyles();
   const { t } = useTranslation();
+  const { locale } = React.useContext(LocaleContext)
+
   return(
     <Layout>
-        <Grid className={classes.wrapper} container>
-          <Grid container className={classes.contentContainer} spacing={2}>
-            <Grid item xs={12} md={6}>
-              <div className={classes.section}>
-                <Typography variant="h1" className={classes.h1} gutterBottom>
-                  {t('homeFeatureTitle')}
-                </Typography>
-                <Typography variant="subtitle1">
-                  {t('homeFeatureSubtitle')}
-                </Typography>
-                <Button variant="contained" color="primary">
-                  {t('homeFeatureButtonText')}
-                </Button>
-              </div>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <div className={`${classes.section} ${classes.bubbleWindowsSection}`}>
-                <Typography variant="h2">
-                  What do you need help with?
-                </Typography>
-                <Grid container spacing={3}>
-                  {BubbleWindows}
-                </Grid>
-              </div>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Layout>
+      <Hero 
+        title={t('about')}
+        subtitle={t('homeFeatureSubtitle')}
+        buttonText={t('homeFeatureButtonText')}
+      />
+      <ServicesOffered
+        title={t('homeServicesTitle')}
+        servicesOffered={servicesOffered}
+        locale={locale}
+      />
+    </Layout>
   )};
-
-
 
 export default withLocale(Index);

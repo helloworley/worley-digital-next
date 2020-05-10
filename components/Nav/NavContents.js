@@ -56,12 +56,10 @@ const useStyles = makeStyles({
   }
 });
 
-
-
-const getSingleMenuItem = (menuItem, menuColor) => {
+const getSingleMenuItem = (menuItem, menuColor, locale) => {
   const classes = useStyles();
   return (
-    <Link href={menuItem.link}>
+    <Link href={`/${locale}${menuItem.link}`}>
       <a className={classes.a} style={{color: menuColor}}>
         {menuItem.name}
       </a>
@@ -95,20 +93,12 @@ const getMenuChildren = (name, menuChildren, menuColor) => {
   )
 }
 
-function logo(color) {
-  if (color == '#fff') {
-    return "/ikigai-light.svg";
-  }
-  return "/ikigai-dark.svg";
-}
-
 function socialLogo(color, lightLogo, darkLogo) {
   if (color == '#fff') {
     return lightLogo;
   }
   return darkLogo;
 }
-
 
 const NavContents = props => {
   const classes = useStyles();
@@ -125,7 +115,7 @@ const NavContents = props => {
       <ul className={classes.list}>
         {menuItems.map(menuItem => (
           <li key={menuItem.name} className={classes.listItem}>
-            {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, props.menuColor) : getSingleMenuItem(menuItem, props.menuColor)}
+            {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, props.menuColor) : getSingleMenuItem(menuItem, props.menuColor, props.locale)}
           </li>
         ))}
       </ul>
@@ -144,9 +134,5 @@ const NavContents = props => {
 
   )
 };
-
-
-
-
 
 export default NavContents;

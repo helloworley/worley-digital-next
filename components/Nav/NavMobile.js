@@ -11,13 +11,16 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
-import { AppBar, Toolbar, Drawer, Typography, Hidden } from '@material-ui/core';
+import { AppBar, Toolbar, Drawer, Typography } from '@material-ui/core';
 import { IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import MailIcon from '@material-ui/icons/Mail';
 
 // custom
 import NavContents from './NavContents';
+
+// locale
+import LocaleSwitcher from '../LocaleSwitcher';
 
 const drawerWidth = 240;
 
@@ -29,7 +32,7 @@ const styles = theme => createStyles({
     backgroundColor: 'transparent',
     boxShadow: 'none',
     '&.filled': {
-      backgroundColor: theme.palette.sedona.white,
+      backgroundColor: 'rgba(17,17,17,.7)',
       color: theme.palette.primary.main,
       boxShadow: theme.shadows[5],
       transition: 'background-color .3s ease-in-out, box-shadow .3s ease-in-out',
@@ -45,13 +48,21 @@ const styles = theme => createStyles({
     textAlign: 'center',
     position: 'relative',
     color: '#333',
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  logo: {
+    color: 'text',
+    cursor: 'pointer',
+    maxWidth: '70px',
   },
   navName: {
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
-    left: 0,
-    right: 0,
+    left: '56px',
+    // left: 0,
+    // right: 0,
     top: '3px'
   }
 });
@@ -131,10 +142,8 @@ class NavMobile extends React.Component {
       </div>
     );
 
-
-
   return (
-    <Hidden mdUp>
+    <>
       <AppBar position="fixed" className={classes.appBar} id="app-bar">
         <Toolbar className={classes.toolbar}>
           <div className={classes.burgerContainer} onClick={this.toggleDrawer('left', true)}>
@@ -143,16 +152,18 @@ class NavMobile extends React.Component {
             </IconButton>
           </div>
           <Link href="/">
-            <p className={classes.navName}>Worley Digital</p>
+            {/* <p className={classes.navName}>Worley Digital</p> */}
+            <img className={classes.logo} src="/worley-digital-logo.svg" id="logo" />
           </Link>
+          <LocaleSwitcher />
           {/* <img className={classes.logo} src="/ikigai-light.svg" /> */}
         </Toolbar>
       </AppBar>
 
       <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
-        <NavContents />
+        <NavContents locale={this.props.locale}/>
       </Drawer>
-    </Hidden>
+    </>
   );
 }};
 

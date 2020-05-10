@@ -1,14 +1,14 @@
 export default [
   {
     link: '/about',
-    name: "About",
+    name: "about",
   },
   {
     link: '/services',
-    name: "Services",
+    name: "services",
   },
   {
     link: '/contact',
-    name: "Contact",
+    name: "contact",
   }
 ]

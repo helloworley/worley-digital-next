@@ -10,6 +10,7 @@ const theme = createMuiTheme({
     palette: {
       primary: {
         main: "#E26000",
+        lightText: "#efefef",
       },
       sedona: {
         darkgray: "#424242",

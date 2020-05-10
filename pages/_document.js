@@ -1,18 +1,21 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
-import theme from '../theme';
+
+const bodyStyles = {
+  maxWidth: '100%',
+  overflowX: 'hidden'
+}
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <html lang="en" style={bodyStyles}>
         <Head>
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
           <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"></link>
         </Head>
-        <body>
+        <body style={bodyStyles}>
           <Main />
           <NextScript />
         </body>

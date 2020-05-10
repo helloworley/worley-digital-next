@@ -1,38 +1,32 @@
 export default [
   {
-    link: '/branding',
-    en: "Branding",
-    jp: "ブランディング",
+    link: 'branding',
+    string: "branding",
     image: ""
   },
   {
-    link: '/photography',
-    en: "Photography",
-    jp: "フォトグラフィ",
+    link: 'photography',
+    string: "photography",
     image: ""
   },
   {
-    link: '/marketing',
-    en: "Social Media Marketing",
-    jp: "SNSマーケティング",
+    link: 'marketing',
+    string: "snsMarketing",
     image: ""
   },
   {
-    link: '/ux',
-    en: "UX Design",
-    jp: "UXデザイン",
+    link: 'ux',
+    string: "uxDesign",
     image: ""
   },
   {
-    link: '/ui',
-    en: "UI Design",
-    jp: "UIデザイン",
+    link: 'ui',
+    string: "uiDesign",
     image: ""
   },
   {
-    link: '/photography',
-    en: "Photography",
-    jp: "フォトグラフィ",
+    link: 'photography',
+    string: "websiteCreation",
     image: ""
   },
 ]

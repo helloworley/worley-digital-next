@@ -5,9 +5,32 @@ import { LocaleContext } from '../context/LocaleContext'
 
 // material 
 import { Radio, RadioGroup, FormControlLabel, FormControl }  from '@material-ui/core/';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  radioGroup: {
+    flexDirection: 'initial',
+    float: 'right',
+  },
+  formControlLabel: {
+    marginRight: '0',
+    marginLeft: '8px',
+    '& .MuiRadio-root + span': {
+      color: 'rgba(255,255,255,.3)',
+    },
+    '& .Mui-checked + span': {
+      fontWeight: '900',
+      color: 'white',
+    }
+  },
+  test: {
+    display: 'none',
+  }
+});
 
 const LocaleSwitcher: React.FC = () => {
-  const router = useRouter()
+  const router = useRouter();
+  const classes = useStyles();
   const { locale } = React.useContext(LocaleContext)
 
   const handleLocaleChange = React.useCallback(
@@ -20,9 +43,15 @@ const LocaleSwitcher: React.FC = () => {
 
   return (
     <FormControl component="fieldset">
-      <RadioGroup aria-label="gender" name="gender1" value={locale} onChange={handleLocaleChange}>
+      <RadioGroup aria-label="gender" name="gender1" value={locale} onChange={handleLocaleChange} className={classes.radioGroup}>
           {locales.map(locale => (
-            <FormControlLabel value={locale} key={locale} control={<Radio />} label={languageNames[locale]} />
+            <FormControlLabel 
+              value={locale} 
+              key={locale} 
+              className={classes.formControlLabel}
+              control={<Radio className={classes.test} />} 
+              label={languageNames[locale]} 
+            />
           ))}
       </RadioGroup>
     </FormControl>

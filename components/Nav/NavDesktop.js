@@ -1,16 +1,21 @@
 import Link from 'next/link';
 import { Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles, createStyles } from '@material-ui/core/styles';
 
 import navItems from '../../data/navItems';
 import navSocials from '../../data/navSocials';
 
+// custom
 import LocaleSwitcher from '../LocaleSwitcher';
+import NavSingleMenuItem from './NavSingleMenuItem';
 
 const menuItems = navItems;
 const socialItems = navSocials;
 
-const useStyles = makeStyles({
+// assets
+const bgImage = '//worley-digital-logo.svg';
+
+const styles = theme => createStyles({
   navigation: {
     padding: '20px 40px',
     width: '100%',
@@ -18,12 +23,19 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     height: '95px',
     position: 'fixed',
-    backgroundColor: 'white',
     top: '0',
     zIndex: '1000',
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
+    '&.filled': {
+      // backgroundColor: 'rgba(17,17,17,.7)',
+      backgroundColor: '#5B5B5B',
+      color: theme.palette.primary.main,
+      boxShadow: theme.shadows[5],
+      transition: 'background-color .3s ease-in-out, box-shadow .3s ease-in-out',
+    },
   },
   socialLogos: {
-  
     bottom: '40px',
     left: '0',
   },
@@ -33,7 +45,7 @@ const useStyles = makeStyles({
   },
   socialsListItem: {
     listStyle: 'none',
-    margin: '0 20px 0 0'
+    margin: '0 20px 0 0',
   },
   socialLogo: {
     height: '12px',
@@ -51,7 +63,7 @@ const useStyles = makeStyles({
   },
   linkStyle: {
     textDecoration: 'none',
-    color: 'text'
+    color: 'text',
   },
   logoContainer: {
     display: 'flex',
@@ -60,37 +72,33 @@ const useStyles = makeStyles({
   logo: {
     color: 'text',
     cursor: 'pointer',
-    maxWidth: '40px',
+    maxWidth: '150px',
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '190px',
+    },
+    '&.shrunk': {
+      maxWidth: '135px',
+      transition: 'max-width .3s ease-in-out, box-shadow .3s ease-in-out',
+    }
   },
   logoText: {
     lineHeight: '54px',
     margin: '0 0 0 8px',
     cursor: 'pointer',
   },
-  a: {
-    listStyle: 'none',
-    padding: '6px 0',
-    color: '#333',
-  },
   navRight: {
     display: 'flex',
+    alignItems: 'baseline',
+  },
+  langSwitcher: {
+    float: 'right',
   }
 });
 
 
-const getSingleMenuItem = (menuItem, menuColor) => {
-  const classes = useStyles();
-  return (
-    <Link href={menuItem.link}>
-      <a className={classes.a} style={{color: menuColor}}>
-        {menuItem.name}
-      </a>
-    </Link>
-  )
-}
 
-const getMenuChildren = (name, menuChildren, menuColor) => {
-  const classes = useStyles();
+
+const getMenuChildren = (name, menuChildren, classes) => {
   return (
     <span>
       <Text
@@ -104,7 +112,7 @@ const getMenuChildren = (name, menuChildren, menuColor) => {
         {menuChildren.map(childItem => (
           <li key={childItem.name} className={classes.listItem}>
             <Link href={childItem.link}>
-              <a className={classes.a} style={{color: menuColor}}>
+              <a className={classes.a}>
                 {childItem.name}
               </a>
             </Link>
@@ -115,39 +123,81 @@ const getMenuChildren = (name, menuChildren, menuColor) => {
   )
 }
 
-const NavDesktop = props => {
-  const classes = useStyles();
-  return (
-    <div className={classes.navigation} id="navigation">
-      <Link href="/">
-        <div className={classes.logoContainer}>
-          <img className={classes.logo} src="/ikigai-dark.svg" />
-          <Typography className={classes.logoText} style={{color: props.menuColor}}>Worley Digital</Typography>
-        </div>
-      </Link>
-      <LocaleSwitcher />
-      <div className={classes.navRight}>
-        <ul className={classes.list}>
-          {menuItems.map(menuItem => (
-            <li key={menuItem.name} className={classes.listItem}>
-              {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, props.menuColor) : getSingleMenuItem(menuItem, props.menuColor)}
-            </li>
-          ))}
-        </ul>
-        <div className={classes.socialLogos}>
-            <ul className={classes.socialsList}>
-              {socialItems.map(socialItem => (
-                <li className={classes.socialsListItem} key={socialItem.logoDark}>
-                  <a href={socialItem.link} target="_blank">
-                    <img className={classes.socialLogo} src={socialItem.logoDark}/>
-                  </a>
-                </li>  
-              ))}
-            </ul>
+class NavDesktop extends React.Component {
+
+  state = {
+    windowPosition: 0
+  };
+
+  // for gettting the scroll position and editing the background color for the nav
+  constructor(props) {
+    super(props);
+    this.handleScroll = this.handleScroll.bind(this);
+  };
+
+  // set the windowPosition state property based on the scroll event
+  handleScroll() {
+    let lastScrollY = window.scrollY;
+    this.setState({
+      windowPosition: lastScrollY
+    });
+    this.toggleNavClass();
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  };
+
+  // add or remove class to the nav based on the state
+  toggleNavClass() {
+    const navigation = document.getElementById('navigation');
+    this.state.windowPosition > 100 ? navigation.classList.add('filled') : navigation.classList.remove('filled');
+    const logo = document.getElementById('logo');
+    this.state.windowPosition > 100 ? logo.classList.add('shrunk') : logo.classList.remove('shrunk');
+  };
+
+  render() {
+    const { classes, locale, topRef } = this.props;
+
+    return(
+      <div className={classes.navigation} id="navigation">
+        <Link href="/">
+          <div className={classes.logoContainer}>
+            <img className={classes.logo} src="/worley-digital-logo.svg" id="logo" />
+            {/* <Typography className={classes.logoText}>Worley Digital</Typography> */}
+          </div>
+        </Link>
+        <div className={classes.navRight}>
+          <LocaleSwitcher className={classes.langSwitcher} />
+          <ul className={classes.list}>
+            {menuItems.map(menuItem => (
+              <li key={menuItem.name} className={classes.listItem}>
+                {/* {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, classes) : getSingleMenuItem(menuItem, classes, t(menuItem.name), this.props.locale)} */}
+                {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, classes) : <NavSingleMenuItem menuItem={menuItem} locale={locale} />}
+              </li>
+            ))}
+          </ul>
+          {locale}
+          <div className={classes.socialLogos}>
+              <ul className={classes.socialsList}>
+                {socialItems.map(socialItem => (
+                  <li className={classes.socialsListItem} key={socialItem.logoDark}>
+                    <a href={socialItem.link} target="_blank">
+                      <img className={classes.socialLogo} src={socialItem.logoDark}/>
+                    </a>
+                  </li>  
+                ))}
+              </ul>
+          </div>
         </div>
       </div>
-    </div>
-  )
+
+    )
+  };
 };
 
-export default NavDesktop;
+export default withStyles(styles)(NavDesktop);

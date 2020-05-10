@@ -20,9 +20,6 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     width: '100%',
-    [theme.breakpoints.up('md')]: {
-      margin: '95px 0 0',
-    },
   },
   rightPannel: {
     overflow: 'auto',
@@ -43,12 +40,17 @@ const Layout = props => {
 
   return (
     <>
-      <NavMobile />
+      <Hidden smUp>
+        <NavMobile locale={props.locale} />
+      </Hidden>
 
       <div className={classes.root}>
         
-        <Hidden smDown>
-          <NavDesktop menuColor={props.menuColor} />
+        <Hidden xsDown>
+          <NavDesktop 
+            menuColor={props.menuColor} 
+            locale={props.locale}  
+          />
         </Hidden>
 
         <div className={classes.content}>
