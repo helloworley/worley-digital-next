@@ -2,8 +2,14 @@
 import { Grid, Hidden } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 
+// custom
 import NavMobile from './Nav/NavMobile';
 import NavDesktop from './Nav/NavDesktop';
+import ContactFormWrapper from './Form/ContactFormWrapper';
+
+// translation
+import useTranslation from '../hooks/useTranslation';
+import { LocaleContext } from '../context/LocaleContext';
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -38,10 +44,13 @@ const useStyles = makeStyles(theme => ({
 const Layout = props => {
   const classes = useStyles();
 
+  const { t } = useTranslation();
+  const { locale } = React.useContext(LocaleContext)
+
   return (
     <>
       <Hidden smUp>
-        <NavMobile locale={props.locale} />
+        <NavMobile locale={locale} />
       </Hidden>
 
       <div className={classes.root}>
@@ -50,8 +59,14 @@ const Layout = props => {
           <NavDesktop 
             menuColor={props.menuColor} 
             locale={props.locale}  
+            toggleContactForm={props.toggleContactForm} 
           />
         </Hidden>
+        
+        <ContactFormWrapper 
+          contactOpen={props.contactOpen}
+          toggleContactForm={props.toggleContactForm} 
+        />
 
         <div className={classes.content}>
           {props.children}

@@ -8,6 +8,7 @@ import navSocials from '../../data/navSocials';
 // custom
 import LocaleSwitcher from '../LocaleSwitcher';
 import NavSingleMenuItem from './NavSingleMenuItem';
+import NavItemToggleContact from './NavItemToggleContact';
 
 const menuItems = navItems;
 const socialItems = navSocials;
@@ -172,17 +173,27 @@ class NavDesktop extends React.Component {
           </div>
         </Link>
         <div className={classes.navRight}>
-          <LocaleSwitcher className={classes.langSwitcher} />
           <ul className={classes.list}>
+            
             {menuItems.map(menuItem => (
               <li key={menuItem.name} className={classes.listItem}>
                 {/* {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, classes) : getSingleMenuItem(menuItem, classes, t(menuItem.name), this.props.locale)} */}
                 {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, classes) : <NavSingleMenuItem menuItem={menuItem} locale={locale} />}
               </li>
             ))}
+
+            
+              <NavItemToggleContact 
+                locale={locale}  
+                toggleContactForm={this.props.toggleContactForm} 
+              />
+            
           </ul>
-          {locale}
-          <div className={classes.socialLogos}>
+
+]
+          
+          <LocaleSwitcher className={classes.langSwitcher} />
+          {/* <div className={classes.socialLogos}>
               <ul className={classes.socialsList}>
                 {socialItems.map(socialItem => (
                   <li className={classes.socialsListItem} key={socialItem.logoDark}>
@@ -192,7 +203,7 @@ class NavDesktop extends React.Component {
                   </li>  
                 ))}
               </ul>
-          </div>
+          </div> */}
         </div>
       </div>
 

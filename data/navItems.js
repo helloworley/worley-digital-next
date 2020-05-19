@@ -6,9 +6,5 @@ export default [
   {
     link: '/services',
     name: "services",
-  },
-  {
-    link: '/contact',
-    name: "contact",
   }
 ]

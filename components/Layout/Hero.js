@@ -7,6 +7,9 @@ import { Button, Typography, Grid } from '@material-ui/core/';
 // next
 // import Link from 'next/link';
 
+// translation
+import useTranslation from '../../hooks/useTranslation';
+
 
 // custom
 import { makeStyles } from '@material-ui/core/styles';
@@ -80,6 +83,7 @@ const useStyles = makeStyles(theme => ({
 
 const Hero = props => {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return(  
     <Grid className={classes.wrapper} container>
@@ -87,14 +91,14 @@ const Hero = props => {
         <Grid item xs={12}>
           <div className={classes.root}>
             <Typography variant="h1" className={classes.h1} gutterBottom>
-              {props.title}
+              {t('homeFeatureTitle')}
             </Typography>
             <Typography variant="subtitle2" className={classes.subtitle}>
-              {props.subtitle}
+              {t('homeFeatureSubtitle')}
             </Typography>
             <div className={classes.buttonWrap}>
               <Button variant="contained" className={classes.button}>
-                {props.buttonText}
+                {t('homeFeatureButtonText')}
               </Button>
             </div>
           </div>

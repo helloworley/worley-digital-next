@@ -106,7 +106,7 @@ const NavContents = props => {
     <div className={classes.navigation} id="navigation">
       <Link href="/">
         <div className={classes.logoContainer}>
-          <img className={classes.logo} src={logo(props.menuColor)} />
+          <img className={classes.logo} />
           <Link href="/">
             <Typography style={{color: props.menuColor}}> Joshua Worley</Typography>
           </Link>

@@ -56,9 +56,9 @@ const ServicesOffered = props => {
             </Typography>
             <Grid container spacing={3}>
               {
-                props.servicesOffered.map( serviceOffered => {
+                props.servicesOffered.map( (serviceOffered, i) => {
                   return (
-                    <Grid item xs={6} sm={4} md={2}>
+                    <Grid item xs={6} sm={4} md={2} key={i}>
                       <Link href={`/${props.locale}/${serviceOffered.link}`}>
                         <a>
                           <BubbleWindow text={t(serviceOffered.string)} bg={serviceOffered.image}/>

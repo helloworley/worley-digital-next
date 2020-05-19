@@ -9,7 +9,7 @@ import { withStyles } from '@material-ui/styles';
 const theme = createMuiTheme({
     palette: {
       primary: {
-        main: "#E26000",
+        main: "#595959",
         lightText: "#efefef",
       },
       sedona: {
@@ -35,13 +35,13 @@ const theme = createMuiTheme({
       ].join(','),
       h1: {
         fontWeight: "900",
-        fontSize: "3.5em",
+        fontSize: '2em',
         lineHeight: "1.3",
         color: "#616161",
       },
       h2: {
         fontWeight: "900",
-        fontSize: "2.2em",
+        fontSize: "1.3em",
         lineHeight: "1.3",
         margin: "0 0 1em",
         color: "#616161",
@@ -100,6 +100,12 @@ const theme = createMuiTheme({
 
 class MyApp extends App {
 
+  state = {
+    contactOpen: false,
+  }
+
+  toggleContactForm = e => this.setState({ contactOpen: !this.state.contactOpen });
+
   render() {
     const { Component, pageProps } = this.props;
 
@@ -113,7 +119,7 @@ class MyApp extends App {
         <CssBaseline />
         <div>
           <MuiThemeProvider theme={theme}>
-            <Component {...pageProps} />
+            <Component {...pageProps} {...this.state} toggleContactForm={this.toggleContactForm} />
           </MuiThemeProvider>
         </div>
       </>

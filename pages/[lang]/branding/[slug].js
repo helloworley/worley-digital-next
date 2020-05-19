@@ -1,5 +1,11 @@
 // react
 import React from 'react'
+import { useRouter } from 'next/router'
+const router = useRouter()
+const { slug } = router.query
+
+// data
+import data from `../../data/brandingExample-${slug}.json`;
 
 // material ui
 import { Grid, Button, Typography } from '@material-ui/core/';
@@ -81,7 +87,8 @@ const useStyles = makeStyles(theme => ({
 const Index = () => {
   const classes = useStyles();
   const { t } = useTranslation();
-  const { locale } = React.useContext(LocaleContext)
+  const { locale } = React.useContext(LocaleContext);
+  console.log('data',data);c
 
   return(
     <Layout>
@@ -93,6 +100,15 @@ const Index = () => {
     </Layout>
   )};
 
+// project.getInitialProps = async function (context) {
+//   const { slug } = context.query;
+//   import data from `../../data/brandingExample-${slug}.json`;
+//   // const res = await fetch(`https://jw.helloworley.com/wp-json/headless/ux/${slug}`);
+//   // const project = await res.json();
+
+//   return { data };
+// };
+  
 
 
 export default withLocale(Index);

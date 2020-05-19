@@ -77,7 +77,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Index = () => {
+const Index = props => {
   const classes = useStyles();
   const { t } = useTranslation();
   const { locale } = React.useContext(LocaleContext)
@@ -85,6 +85,8 @@ const Index = () => {
   return(
     <Layout
       locale={locale}
+      toggleContactForm={props.toggleContactForm} 
+      contactOpen={props.contactOpen}
     >
       <Hero 
         title={t('homeFeatureTitle')}
