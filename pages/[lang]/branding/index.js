@@ -1,11 +1,8 @@
 // react
 import React from 'react'
-import { useRouter } from 'next/router'
-const router = useRouter()
-const { slug } = router.query
 
 // data
-import data from `../../data/brandingExample-${slug}.json`;
+// import data from `../../data/brandingExample-${slug}.json`;
 
 // material ui
 import { Grid, Button, Typography } from '@material-ui/core/';
@@ -88,7 +85,6 @@ const Index = () => {
   const classes = useStyles();
   const { t } = useTranslation();
   const { locale } = React.useContext(LocaleContext);
-  console.log('data',data);c
 
   return(
     <Layout>
