@@ -8,6 +8,7 @@ import {
   TextField,
   FormGroup,
   FormControlLabel,
+  Button
   } from '@material-ui/core/';
   import { makeStyles } from '@material-ui/core/styles';
 
@@ -54,6 +55,10 @@ const useStyles = makeStyles(theme => ({
   input: {
     margin: '0'
   },
+  closeButton: {
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+  }
 }));
 
 
@@ -135,7 +140,16 @@ const ContactForm = props => {
     });
   }
 
-  const thankYouMessage = <p>{t('contactThankYou')}</p>;
+  const thankYouMessage = props => {
+    return (
+      <>
+        <p>{t('contactThankYou')}</p>
+        <Button className={classes.closeButton} variant="contained" type="submit" label="Submit" color="primary" onClick={props.toggleContactForm}>
+          {t('returnToSite')}
+        </Button>
+      </>
+    )
+  };
     
   return (
     <form
@@ -258,7 +272,7 @@ const ContactForm = props => {
                   />
                 </div>
 
-                { state.displaySubmit ? <ContactSubmitButton /> : thankYouMessage }
+                { state.displaySubmit ? <ContactSubmitButton /> : thankYouMessage(props) }
 
                 
               </Grid>

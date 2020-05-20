@@ -78,7 +78,7 @@ const ContactFormWrapper = props => {
         <Typography variant="body1" className={`${classes.contactIntro}`}>
           {t('contactIntro')}
         </Typography>
-        <ContactForm />
+        <ContactForm toggleContactForm={props.toggleContactForm} />
       </div>
       <div className={classes.contactFormBackdrop}>
       </div>

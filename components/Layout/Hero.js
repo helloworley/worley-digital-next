@@ -80,6 +80,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     fontStyle: 'normal',
+    fontWeight: 'bold',
   },
   moodIcon: {
     margin: '0 0 0 4px',
