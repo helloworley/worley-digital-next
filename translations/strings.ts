@@ -34,6 +34,7 @@ const strings: Strings = {
     contactCompanyPlaceholder: 'Oceans Eleven',
     contactWhatsInguiry: 'Would you like to leave a note?',
     contactInquiryPlaceholder: 'Hi Worley Digital, I was wondering...',
+    contactThankYou: 'Thank you for your message! We will get back to you soon!'
   },
   ja: {
     homeFeatureTitle: 'デジタルの未来にあなたの創造的な友人。',
@@ -65,7 +66,8 @@ const strings: Strings = {
     contactWhatsCompany: '会社名は？',
     contactCompanyPlaceholder: '株式会社スタジオジブリ',
     contactWhatsInguiry: 'メモを残しますか？',
-    contactInquiryPlaceholder: 'ウォーリーデジタル、こんにちは…'
+    contactInquiryPlaceholder: 'ウォーリーデジタル、こんにちは…',
+    contactThankYou: 'メッセージありがとうございます。間も無くご連絡いたします。'
   }
 }
 

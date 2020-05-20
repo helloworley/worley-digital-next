@@ -59,83 +59,125 @@ const useStyles = makeStyles(theme => ({
 
 const ContactForm = props => {
   const classes = useStyles();
-  const { t } = useTranslation();
 
-  // React hook set state
   const [state, setState] = React.useState({
-    displaySubmit: true,
-  });
+    // radio buttons
+    branding: '',
+    photography: '',
+    marketing: '',
+    uxDesign: '',
+    uiDesign: '',
+    websiteCreation: '',
+    other: '',
+    // text inputs
+    name: '',
+    email: '',
+    company: '',
+    inquiry: '',
+    // logic
+    displaySubmit: true
+});
 
-  const checkCheckBox = id => {
-    const checkChecked = document.getElementById(id).checked;
-    return checkChecked ? '√' : '';
+
+// handle changes
+const handleChangeCheckbox = (event) => {
+  setState({ ...state, [event.target.name]: event.target.checked });
+  console.log('new state', state)
+};
+
+const handleChangeInput = prop => (event) => {
+  setState({ ...state, [prop]: event.target.value});
+  console.log('new state', state)
+};
+
+// create variables
+const { branding, photography, marketing, uxDesign, uiDesign, websiteCreation, other, name, email, company, inquiry } = state;
+
+// translation
+const { t } = useTranslation();
+// const { locale } = React.useContext(LocaleContext)
+
+
+// form logic 
+const getData = () => {
+  // console.log('branding', branding)
+  // console.log('state.branding', state.branding)
+  console.log('branding value', document.getElementById('branding').checked)
+  console.log('name value', document.getElementById('name').value)
+  const formData = {
+    branding: document.getElementById('branding').value,
+    photography: state.photography,
+    marketing: state.marketing,
+    uxDesign: state.uxDesign,
+    uiDesign: state.uiDesign,
+    websiteCreation: state.websiteCreation,
+    other: state.other,
+    // text inputs
+    name: state.name,
+    email: state.email,
+    company: state.company,
+    inquiry: state.inquiry,
   }
+  console.log('getting data')
+  console.log('state', state)
+  console.log('form data', formData);
+  return formData;
+}
 
-  const getData = () => {
-    const formData = {
-      branding: checkCheckBox('branding'),
-      photography: checkCheckBox('photography'),
-      marketing: checkCheckBox('marketing'),
-      uxDesign: checkCheckBox('uxDesign'),
-      uiDesign: checkCheckBox('uiDesign'),
-      websiteCreation: checkCheckBox('websiteCreation'),
-      other: checkCheckBox('other'),
-      name: document.getElementById('name').value,
-      company: document.getElementById('company').value,
-      email: document.getElementById('email').value,
-      inquiry: document.getElementById('inquiry').value,
-    }
-    return formData;
+// React Hook for Component Did Mount functionality
+// effects run after every completed render
+useEffect(() => {
+  const theForm = document.getElementById('contact-form');
+  waitForForm(theForm);
+}, []);
+
+
+const waitForForm = form => {
+  if(typeof form !== 'undefined') {
+    addSubmitListener(form);
+  } else {
+    waitForForm(document.getElementById('contact-form'));
   }
+}
 
-  // React Hook for Component Did Mount functionality
-  // effects run after every completed render
-  useEffect(() => {
-    const theForm = document.getElementById('contact-form');
-    waitForForm(theForm);
-  }, []);
+const addSubmitListener = theForm => {
+  console.log('add listener');
 
-  const waitForForm = form => {
-    if(typeof form !== 'undefined') {
-      addSubmitListener(form);
-    } else {
-      waitForForm(document.getElementById('contact-form'));
-    }
-  }
-
-  const addSubmitListener = theForm => {
-    console.log('add listener');
-
-    theForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const formData = getData();
-      console.log('form data', formData);
-      let submitStatus = 'PENDING';
-      fetch(`https://usebasin.com/f/b3b2da236c0c.json`, {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-            'content-type': 'application/json'
-        }
-      }).then(res => {
-        res
-          .json()
-          .then(data => {
-              state.messageSent = data.success;
-              setState({
-                ...state,
-                displaySubmit: false,
-              });
-          });
-      });
-      setTimeout(() => {
-        submitStatus = 'OK'
-      }, 500)
-
+  theForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = getData();
+    console.log('form data', formData);
+    let submitStatus = 'PENDING';
+    fetch(`https://usebasin.com/f/b3b2da236c0c.json`, {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+          'content-type': 'application/json'
+      }
+    }).then(res => {
+      res
+        .json()
+        .then(data => {
+            state.messageSent = data.success;
+            setState({
+              ...state,
+              displaySubmit: false,
+            });
+        });
     });
-  }
+    setTimeout(() => {
+      submitStatus = 'OK'
+    }, 500)
 
-  const thankYouMessage = <p>{t('contactThankYou')}</p>;
+  });
+}
+
+
+
+
+
+
+  const thankYouMessage = <p>Thank you for your message! I'll get back to you as soon as I can :)</p>;
     
   return (
     <form
@@ -145,6 +187,7 @@ const ContactForm = props => {
       autoComplete="off"
       // onSubmit={this.handleSubmit()}
       >
+
         <div className={classes.contactForm}>
           <Typography variant="h2" className={`${classes.contactSubtitle}`}>
             {t('contactSubtitle')}
@@ -160,24 +203,24 @@ const ContactForm = props => {
                 <Grid item xs={12} sm={6} md={3}>
                   <FormControlLabel
                     className={classes.radio}
-                    control={<Checkbox color="primary" name="branding" id="branding"/>}
+                    control={<Checkbox onChange={handleChangeCheckbox} color="primary" name="branding" id="branding"/>}
                     label={t('branding')}
                   />
                   <FormControlLabel
                     className={classes.radio}
-                    control={<Checkbox color="primary" name="photography" id="photography"/>}
+                    control={<Checkbox  onChange={handleChangeCheckbox} color="primary" name="photography"/>}
                     label={t('photography')}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
                   <FormControlLabel
                     className={classes.radio}
-                    control={<Checkbox color="primary" name="marketing" id="marketing"/>}
+                    control={<Checkbox onChange={handleChangeCheckbox} color="primary" name="marketing"/>}
                     label={t('snsMarketing')}
                   />
                   <FormControlLabel
                     className={classes.radio}
-                    control={<Checkbox color="primary" name="uxDesign" id="uxDesign"/>}
+                    control={<Checkbox  onChange={handleChangeCheckbox} color="primary" name="uxDesign"/>}
                     label={t('uxDesign')}
                   />
                 </Grid>
@@ -185,19 +228,19 @@ const ContactForm = props => {
                   
                   <FormControlLabel
                     className={classes.radio}
-                    control={<Checkbox color="primary" name="uiDesign" id="uiDesign"/>}
+                    control={<Checkbox onChange={handleChangeCheckbox} color="primary" name="uiDesign"/>}
                     label={t('uiDesign')}
                   />
                   <FormControlLabel
                     className={classes.radio}
-                    control={<Checkbox color="primary" name="websiteCreation" id="websiteCreation"/>}
+                    control={<Checkbox onChange={handleChangeCheckbox} color="primary" name="websiteCreation"/>}
                     label={t('websiteCreation')}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
                   <FormControlLabel
                     className={classes.radio}
-                    control={<Checkbox color="primary" name="other" id="other"/>}
+                    control={<Checkbox onChange={handleChangeCheckbox} color="primary" name="other"/>}
                     label={t('other')}
                   />
                 </Grid>
@@ -215,6 +258,7 @@ const ContactForm = props => {
                     id="name" 
                     fullWidth
                     label={t('contactWhatsName')}
+                    onChange={handleChangeInput('name')}
                     placeholder={t('contactNamePlaceholder')}
                     className={classes.input}
                     variant="outlined" 
@@ -226,6 +270,7 @@ const ContactForm = props => {
                     id="company" 
                     fullWidth
                     label={t('contactWhatsCompany')}
+                    onChange={handleChangeInput('company')}
                     placeholder={t('contactCompanyPlaceholder')}
                     className={classes.input}
                     variant="outlined" 
@@ -237,6 +282,7 @@ const ContactForm = props => {
                     id="email"
                     fullWidth
                     label={t('contactWhatsEmail')}
+                    onChange={handleChangeInput('email')}
                     placeholder={t('contactEmailPlaceholder')}
                     variant="outlined" 
                   />
@@ -253,6 +299,7 @@ const ContactForm = props => {
                     rows={4}
                     fullWidth
                     label={t('contactWhatsInguiry')}
+                    onChange={handleChangeInput('inquiry')}
                     placeholder={t('contactInquiryPlaceholder')}
                     variant="outlined" 
                   />
