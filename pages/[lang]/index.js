@@ -92,6 +92,7 @@ const Index = props => {
         title={t('homeFeatureTitle')}
         subtitle={t('homeFeatureSubtitle')}
         buttonText={t('homeFeatureButtonText')}
+        toggleContactForm={props.toggleContactForm} 
       />
       <ServicesOffered
         title={t('homeServicesTitle')}

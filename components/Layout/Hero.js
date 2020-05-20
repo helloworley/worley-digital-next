@@ -3,6 +3,7 @@ import React from 'react'
 
 // material ui
 import { Button, Typography, Grid } from '@material-ui/core/';
+import MoodIcon from '@material-ui/icons/Mood';
 
 // next
 // import Link from 'next/link';
@@ -77,8 +78,16 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'left'
     },
   },
+  button: {
+    fontStyle: 'normal',
+  },
+  moodIcon: {
+    margin: '0 0 0 4px',
+    fontSize: '20px',
+  }
 }));
 
+//sentiment_very_satisfied
 
 
 const Hero = props => {
@@ -97,8 +106,9 @@ const Hero = props => {
               {t('homeFeatureSubtitle')}
             </Typography>
             <div className={classes.buttonWrap}>
-              <Button variant="contained" className={classes.button}>
+              <Button variant="contained" className={classes.button} onClick={props.toggleContactForm} >
                 {t('homeFeatureButtonText')}
+                <MoodIcon className={classes.moodIcon}/>
               </Button>
             </div>
           </div>
