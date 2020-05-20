@@ -114,12 +114,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Index = () => {
+const Index = props => {
   const classes = useStyles();
   const { locale } = React.useContext(LocaleContext)
 
   return(
-    <Layout>
+    <Layout
+      locale={locale}
+      toggleContactForm={props.toggleContactForm} 
+      contactOpen={props.contactOpen}
+    >
       <>
       <div className={classes.wrapper}>
         <div className={classes.wrapperInner}>
