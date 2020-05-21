@@ -54,14 +54,13 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundColor: 'rgba(17,17,17,.7)',
     padding: '0 24px',
-    backgroundSize: 'contain',
+    backgroundSize: 'cover !important',
     backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center !important',
     [theme.breakpoints.up('sm')]: {
       padding: '0 40px',
     },
     [theme.breakpoints.up('md')]: {
-      backgroundSize: 'cover',
-      // height: '90vh',
     },
     [theme.breakpoints.up('lg')]: {
       padding: '0',
@@ -76,6 +75,7 @@ const useStyles = makeStyles(theme => ({
   },
   contentContainer: {
     maxWidth: '1260px',
+    margin: '0 auto',
   },
   centeredWrapper: {
     textAlign: 'center',

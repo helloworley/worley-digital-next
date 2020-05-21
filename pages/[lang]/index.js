@@ -21,7 +21,7 @@ import ServicesOffered from '../../components/Layout/ServicesOffered';
 
 // data
 import servicesOffered from '../../data/servicesOffered';
-const bgImage = 'teamlab-1.jpg';
+const bgImage = 'earth.jpg';
 
 const useStyles = makeStyles(theme => ({
   root: {
