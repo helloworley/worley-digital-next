@@ -4,6 +4,7 @@ import { withStyles, createStyles } from '@material-ui/core/styles';
 
 import navItems from '../../data/navItems';
 import navSocials from '../../data/navSocials';
+import servicesOffered from '../../data/servicesOffered';
 
 // custom
 import LocaleSwitcher from '../LocaleSwitcher';
@@ -18,7 +19,7 @@ const bgImage = '//worley-digital-logo.svg';
 
 const styles = theme => createStyles({
   navigation: {
-    padding: '20px 40px',
+    padding: '0 40px',
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
@@ -59,8 +60,6 @@ const styles = theme => createStyles({
   },
   listItem: {
     listStyle: 'none',
-    padding: '6px 0',
-    margin: '10px 30px 0 0',
   },
   linkStyle: {
     textDecoration: 'none',
@@ -97,32 +96,6 @@ const styles = theme => createStyles({
 });
 
 
-
-
-const getMenuChildren = (name, menuChildren, classes) => {
-  return (
-    <span>
-      <Text
-        sx={{
-          color: '#bababa'
-        }}
-      >
-        {name}
-      </Text>
-      <ul>
-        {menuChildren.map(childItem => (
-          <li key={childItem.name} className={classes.listItem}>
-            <Link href={childItem.link}>
-              <a className={classes.a}>
-                {childItem.name}
-              </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </span>
-  )
-}
 
 class NavDesktop extends React.Component {
 
@@ -175,12 +148,15 @@ class NavDesktop extends React.Component {
         <div className={classes.navRight}>
           <ul className={classes.list}>
             
-            {menuItems.map(menuItem => (
-              <li key={menuItem.name} className={classes.listItem}>
-                {/* {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, classes) : getSingleMenuItem(menuItem, classes, t(menuItem.name), this.props.locale)} */}
-                {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, classes) : <NavSingleMenuItem menuItem={menuItem} locale={locale} />}
+            
+              <li className={classes.listItem}>
+                 <NavSingleMenuItem name='about' link='/about' locale={locale} />
               </li>
-            ))}
+
+              <li className={classes.listItem}>
+                 <NavSingleMenuItem name='services' link='#' dropDownItems={servicesOffered} locale={locale} />
+              </li>
+            
 
             
               <NavItemToggleContact 
@@ -190,7 +166,8 @@ class NavDesktop extends React.Component {
             
           </ul>
 
-]
+
+
           
           <LocaleSwitcher className={classes.langSwitcher} />
           {/* <div className={classes.socialLogos}>

@@ -1,32 +1,32 @@
 export default [
   {
     link: 'branding',
-    string: "branding",
+    text: "branding",
     image: ""
   },
   {
     link: 'photography',
-    string: "photography",
+    text: "photography",
     image: ""
   },
   {
     link: 'marketing',
-    string: "snsMarketing",
+    text: "snsMarketing",
     image: ""
   },
   {
-    link: 'ux',
-    string: "uxDesign",
+    link: 'ux-design',
+    text: "uxDesign",
     image: ""
   },
   {
-    link: 'ui',
-    string: "uiDesign",
+    link: 'ui-design',
+    text: "uiDesign",
     image: ""
   },
   {
-    link: 'photography',
-    string: "websiteCreation",
+    link: 'website-creation',
+    text: "websiteCreation",
     image: ""
   },
 ]

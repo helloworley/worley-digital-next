@@ -10,12 +10,11 @@ import useTranslation from '../../hooks/useTranslation';
 const useStyles = makeStyles(theme => ({
   item: {
     listStyle: 'none',
-    padding: '6px 0',
-    margin: '10px 30px 0 0',
   },
   contactTrigger: {
     listStyle: 'none',
     cursor: 'pointer',
+    padding: '40px 30px',
     color: '#fff',
     textDecoration: 'none',
     fontWeight: 'bold',
