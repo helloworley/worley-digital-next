@@ -153,8 +153,8 @@ class NavDesktop extends React.Component {
                  <NavSingleMenuItem name='about' link='/about' locale={locale} />
               </li>
 
-              <li className={classes.listItem}>
-                 <NavSingleMenuItem name='services' link='#' dropDownItems={servicesOffered} locale={locale} />
+              <li className={classes.listItem} onMouseEnter={this.props.toggleServicesHovered} onMouseLeave={this.props.toggleServicesHovered}>
+                 <NavSingleMenuItem name='services' link='#' dropDownItems={servicesOffered} locale={locale} servicesHovered={this.props.servicesHovered}/>
               </li>
             
 

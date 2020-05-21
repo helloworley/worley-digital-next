@@ -20,12 +20,10 @@ const useStyles = makeStyles(theme => ({
     color: '#fff',
     fontWeight: 'bold',
     listStyle: 'none',
-    '&:hover': {
-      color: 'rgba(255,255,255,.7)',
-    }
   },
-  aDropDown: {
+  linkInnerHovered: {
     backgroundColor: '#fff',
+    color: '#5B5B5B',
   },
   textAndDropDown: {
     position: 'relative',
@@ -37,7 +35,6 @@ const useStyles = makeStyles(theme => ({
   },
   textAndDropDownText: {
     cursor: 'pointer',
-    color: '#5B5B5B',
   }
 }));
 
@@ -56,14 +53,16 @@ const NavSingleMenuItem = props => {
     </Link>
   );
 
+  const onHover = props.servicesHovered ? classes.linkInnerHovered : null;
+
   const textAndDropDown = (
     <div className={classes.textAndDropDown}>
       <div className={`${classes.aDropDown}`}>
-        <div className={`${classes.textAndDropDownText} ${classes.linkInner}`}>
+        <div className={`${classes.textAndDropDownText} ${classes.linkInner} ${onHover}`}>
           {t(props.name)}
         </div>
       </div>
-      <div className={classes.dropDown}>
+      <div className={classes.dropDown} style={ props.servicesHovered ? {display: 'block'} : { display: 'none' }}>
         <NavDropDown dropDownItems={props.dropDownItems}/>
       </div>
     </div>

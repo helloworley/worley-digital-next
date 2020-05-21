@@ -102,9 +102,11 @@ class MyApp extends App {
 
   state = {
     contactOpen: false,
+    servicesHovered: false,
   }
 
   toggleContactForm = e => this.setState({ contactOpen: !this.state.contactOpen });
+  toggleServicesHovered = e => this.setState({ servicesHovered: !this.state.servicesHovered });
 
   render() {
     const { Component, pageProps } = this.props;
@@ -119,7 +121,10 @@ class MyApp extends App {
         <CssBaseline />
         <div>
           <MuiThemeProvider theme={theme}>
-            <Component {...pageProps} {...this.state} toggleContactForm={this.toggleContactForm} />
+            <Component {...pageProps} {...this.state} 
+              toggleContactForm={this.toggleContactForm} 
+              toggleServicesHovered={this.toggleServicesHovered} 
+            />
           </MuiThemeProvider>
         </div>
       </>

@@ -60,6 +60,8 @@ const Layout = props => {
             menuColor={props.menuColor} 
             locale={props.locale}  
             toggleContactForm={props.toggleContactForm} 
+            toggleServicesHovered={props.toggleServicesHovered}
+            servicesHovered={props.servicesHovered}
           />
         </Hidden>
         

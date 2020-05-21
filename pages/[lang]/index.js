@@ -86,6 +86,8 @@ const Index = props => {
     <Layout
       locale={locale}
       toggleContactForm={props.toggleContactForm} 
+      toggleServicesHovered={props.toggleServicesHovered}
+      servicesHovered={props.servicesHovered}
       contactOpen={props.contactOpen}
     >
       <Hero 
