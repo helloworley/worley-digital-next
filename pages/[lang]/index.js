@@ -21,9 +21,7 @@ import ServicesOffered from '../../components/Layout/ServicesOffered';
 
 // data
 import servicesOffered from '../../data/servicesOffered';
-
-// assets
-const bgImage = '/triangle-backdrop.svg';
+const bgImage = 'teamlab-1.jpg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -95,6 +93,7 @@ const Index = props => {
         subtitle={t('homeFeatureSubtitle')}
         buttonText={t('homeFeatureButtonText')}
         toggleContactForm={props.toggleContactForm} 
+        bgImage={bgImage}
       />
       <ServicesOffered
         title={t('homeServicesTitle')}

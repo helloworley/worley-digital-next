@@ -54,6 +54,8 @@ const useStyles = makeStyles(theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundColor: 'rgba(17,17,17,.7)',
     padding: '0 24px',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
     [theme.breakpoints.up('sm')]: {
       padding: '0 40px',
     },
@@ -65,12 +67,15 @@ const useStyles = makeStyles(theme => ({
       padding: '0',
     }
   },
+  wrapperInner: {
+    backgroundColor: 'rgba(17,17,17,.7)',
+    padding: '120px 0 80px',
+    [theme.breakpoints.up('md')]: {
+      padding: '200px 0 140px',
+    },
+  },
   contentContainer: {
     maxWidth: '1260px',
-    margin: '120px auto 80px',
-    [theme.breakpoints.up('md')]: {
-      margin: '200px auto 140px',
-    },
   },
   centeredWrapper: {
     textAlign: 'center',
@@ -95,28 +100,31 @@ const Hero = props => {
   const classes = useStyles();
   const { t } = useTranslation();
 
-  return(  
-    <Grid className={classes.wrapper} container>
-      <Grid container className={classes.contentContainer} spacing={2}>
-        <Grid item xs={12}>
-          <div className={classes.root}>
-            <Typography variant="h1" className={classes.h1} gutterBottom>
-              {t('homeFeatureTitle')}
-            </Typography>
-            <Typography variant="subtitle2" className={classes.subtitle}>
-              {t('homeFeatureSubtitle')}
-            </Typography>
-            <div className={classes.buttonWrap}>
-              <Button variant="contained" className={classes.button} onClick={props.toggleContactForm} >
-                {t('homeFeatureButtonText')}
-                <MoodIcon className={classes.moodIcon}/>
-              </Button>
-            </div>
-          </div>
-        </Grid>
-      </Grid>
+  const containsBgImage = props.bgImage ? { background: `url(${props.bgImage})`} : null;
 
-    </Grid>
+  return(  
+    <div className={classes.wrapper} style={containsBgImage} container>
+      <div className={classes.wrapperInner}>
+        <Grid container className={classes.contentContainer} spacing={2}>
+          <Grid item xs={12}>
+            <div className={classes.root}>
+              <Typography variant="h1" className={classes.h1} gutterBottom>
+                {t('homeFeatureTitle')}
+              </Typography>
+              <Typography variant="subtitle2" className={classes.subtitle}>
+                {t('homeFeatureSubtitle')}
+              </Typography>
+              <div className={classes.buttonWrap}>
+                <Button variant="contained" className={classes.button} onClick={props.toggleContactForm} >
+                  {t('homeFeatureButtonText')}
+                  <MoodIcon className={classes.moodIcon}/>
+                </Button>
+              </div>
+            </div>
+          </Grid>
+        </Grid>
+      </div>
+    </div>
   )};
 
 export default Hero;
