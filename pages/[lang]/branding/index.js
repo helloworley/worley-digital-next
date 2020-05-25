@@ -1,9 +1,6 @@
 // react
 import React from 'react'
 
-// data
-// import data from `../../data/brandingExample-${slug}.json`;
-
 // material ui
 import { Grid, Button, Typography } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,12 +17,15 @@ import { LocaleContext } from '../../../context/LocaleContext';
 // custom
 import Layout from '../../../components/MyLayout';
 import Hero from '../../../components/Layout/Hero';
+import ServicesOffered from '../../../components/Layout/ServicesOffered';
 
 // data
-import servicesOffered from '../../../data/servicesOffered';
-
-// assets
-const bgImage = '/triangle-backdrop.svg';
+import pageData from '../../../data/pageBranding.json';
+const bgImage = pageData.heroBackground.en.fields.file.en.url;
+const titleEn = pageData.pageTitle.en;
+const titleJa = pageData.pageTitle.ja;
+const pageSubtitleEn = pageData.pageSubtitle.en;
+const pageSubtitleJa = pageData.pageSubtitle.ja;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -79,32 +79,40 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-
-
-const Index = () => {
+const Index = props => {
   const classes = useStyles();
   const { t } = useTranslation();
-  const { locale } = React.useContext(LocaleContext);
+  const { locale } = React.useContext(LocaleContext)
+
+  const title = 'branding';
+  const subtitle = 'homeFeatureSubtitle';
+  const buttonText = 'homeFeatureButtonText';
+
+  console.log('page data', pageData)
+  console.log('locale', locale)
+
+  const switchText = ( textEn, textJa ) => {
+    return locale == 'en' ? textEn : textJa;
+  }
 
   return(
-    <Layout>
+    <Layout
+      locale={locale}
+      toggleContactForm={props.toggleContactForm} 
+      toggleServicesHovered={props.toggleServicesHovered}
+      servicesHovered={props.servicesHovered}
+      contactOpen={props.contactOpen}
+    >
       <Hero 
-        title={t('branding')}
-        subtitle={t('homeFeatureSubtitle')}
-        buttonText={t('homeFeatureButtonText')}
+        title={ switchText( titleEn, titleJa ) }
+        subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
+        buttonText={buttonText}
+        toggleContactForm={props.toggleContactForm} 
+        bgImage={bgImage}
       />
     </Layout>
   )};
 
-// project.getInitialProps = async function (context) {
-//   const { slug } = context.query;
-//   import data from `../../data/brandingExample-${slug}.json`;
-//   // const res = await fetch(`https://jw.helloworley.com/wp-json/headless/ux/${slug}`);
-//   // const project = await res.json();
-
-//   return { data };
-// };
-  
 
 
 export default withLocale(Index);

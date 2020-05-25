@@ -44,7 +44,7 @@ const NavSingleMenuItem = props => {
   const { locale } = React.useContext(LocaleContext);
 
   const singleLink = (
-    <Link href={`/${locale}/${props.link}`}>
+    <Link href={`/${locale}${props.link}`}>
       <a className={classes.link}>
         <div className={classes.linkInner}>
           {t(props.name)}

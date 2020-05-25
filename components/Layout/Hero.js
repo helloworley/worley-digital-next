@@ -109,10 +109,10 @@ const Hero = props => {
           <Grid item xs={12}>
             <div className={classes.root}>
               <Typography variant="h1" className={classes.h1} gutterBottom>
-                {t('homeFeatureTitle')}
+                {props.title}
               </Typography>
               <Typography variant="subtitle2" className={classes.subtitle}>
-                {t('homeFeatureSubtitle')}
+                {props.subtitle}
               </Typography>
               <div className={classes.buttonWrap}>
                 <Button variant="contained" className={classes.button} onClick={props.toggleContactForm} >

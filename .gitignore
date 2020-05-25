@@ -14,6 +14,7 @@
 
 # production
 /build
+/helpers
 
 # misc
 .DS_Store

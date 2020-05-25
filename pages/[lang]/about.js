@@ -3,7 +3,7 @@ import React from 'react'
 
 // data
 import data from '../../data/about.json';
-const bgImage = '/about-background.jpg';
+const bgImage = '/hello.jpg';
 
 // material ui
 import { Grid, Button, Typography } from '@material-ui/core/';

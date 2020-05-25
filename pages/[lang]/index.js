@@ -21,7 +21,7 @@ import ServicesOffered from '../../components/Layout/ServicesOffered';
 
 // data
 import servicesOffered from '../../data/servicesOffered';
-const bgImage = 'earth.jpg';
+const bgImage = 'teamlab-2.jpg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -78,7 +78,17 @@ const useStyles = makeStyles(theme => ({
 const Index = props => {
   const classes = useStyles();
   const { t } = useTranslation();
-  const { locale } = React.useContext(LocaleContext)
+  const { locale } = React.useContext(LocaleContext);
+
+  const switchText = ( textEn, textJa ) => {
+    return locale == 'en' ? textEn : textJa;
+  }
+
+  const titleEn = 'Your creative friend in the digital future.';
+  const titleJa = 'デジタルの未来にあなたの創造的な友人。';
+  const subtitleEn = 'Worley Digital provides professional digital consulting and creative services to supercharge your business growth.';
+  const subtitleJa = 'ウォーリーデジタルは、ビジネスの成長を促進するためのプロフェッショナルなデジタルコンサルティングとクリエイティブサービスを提供しています。';
+  const buttonText = 'homeFeatureButtonText';
 
   return(
     <Layout
@@ -89,9 +99,9 @@ const Index = props => {
       contactOpen={props.contactOpen}
     >
       <Hero 
-        title={t('homeFeatureTitle')}
-        subtitle={t('homeFeatureSubtitle')}
-        buttonText={t('homeFeatureButtonText')}
+        title={ switchText( titleEn, titleJa ) }
+        subtitle={ switchText( subtitleEn, subtitleJa ) }
+        buttonText={buttonText}
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
