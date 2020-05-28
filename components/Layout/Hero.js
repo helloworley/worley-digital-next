@@ -52,23 +52,21 @@ const useStyles = makeStyles(theme => ({
     margin: '0 auto',
     width: '100%',
     backgroundRepeat: 'no-repeat',
-    backgroundColor: 'rgba(17,17,17,.7)',
-    padding: '0 24px',
     backgroundSize: 'cover !important',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center !important',
-    [theme.breakpoints.up('sm')]: {
-      padding: '0 40px',
-    },
-    [theme.breakpoints.up('md')]: {
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: '0',
-    }
+    // [theme.breakpoints.up('sm')]: {
+    //   padding: '0 40px',
+    // },
+    // [theme.breakpoints.up('md')]: {
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //   padding: '0',
+    // }
   },
   wrapperInner: {
     backgroundColor: 'rgba(17,17,17,.7)',
-    padding: '120px 0 80px',
+    padding: '120px 24px 80px',
     [theme.breakpoints.up('md')]: {
       padding: '200px 0 140px',
     },
