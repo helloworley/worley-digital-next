@@ -18,6 +18,7 @@ import { LocaleContext } from '../../../context/LocaleContext';
 import Layout from '../../../components/MyLayout';
 import Hero from '../../../components/Layout/Hero';
 import ServicesOffered from '../../../components/Layout/ServicesOffered';
+import ServiceSelectTabBar from '../../../components/Layout/ServiceSelectTabBar';
 
 // data
 import pageData from '../../../data/pageBranding.json';
@@ -88,9 +89,6 @@ const Index = props => {
   const subtitle = 'homeFeatureSubtitle';
   const buttonText = 'homeFeatureButtonText';
 
-  console.log('page data', pageData)
-  console.log('locale', locale)
-
   const switchText = ( textEn, textJa ) => {
     return locale == 'en' ? textEn : textJa;
   }
@@ -110,6 +108,7 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
+      <ServiceSelectTabBar />
     </Layout>
   )};
 

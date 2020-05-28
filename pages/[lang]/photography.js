@@ -5,6 +5,9 @@ import React from 'react'
 import { Grid, Button, Typography } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 
+// next
+import Link from 'next/link';
+
 // translation
 import useTranslation from '../../hooks/useTranslation';
 import withLocale from '../../hocs/withLocale';
@@ -15,10 +18,17 @@ import { LocaleContext } from '../../context/LocaleContext';
 import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
 import ServicesOffered from '../../components/Layout/ServicesOffered';
+import ServiceSelectTabBar from '../../components/Layout/ServiceSelectTabBar';
 
 // data
-import servicesOffered from '../../data/servicesOffered';
-const bgImage = 'teamlab-2.jpg';
+import pageData from '../../data/pagePhotography.json';
+const bgImage = pageData.heroBackground.en.fields.file.en.url;
+const titleEn = pageData.title.en;
+// const titleEn = 'Photography';
+const titleJa = pageData.title.ja;
+// const titleJa = 'フォトグラフィ';
+const pageSubtitleEn = pageData.subtitle.en;
+const pageSubtitleJa = pageData.subtitle.ja;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -75,17 +85,15 @@ const useStyles = makeStyles(theme => ({
 const Index = props => {
   const classes = useStyles();
   const { t } = useTranslation();
-  const { locale } = React.useContext(LocaleContext);
+  const { locale } = React.useContext(LocaleContext)
+
+  const title = 'branding';
+  const subtitle = 'homeFeatureSubtitle';
+  const buttonText = 'homeFeatureButtonText';
 
   const switchText = ( textEn, textJa ) => {
     return locale == 'en' ? textEn : textJa;
   }
-
-  const titleEn = 'Your creative friend in the digital future.';
-  const titleJa = 'デジタルの未来にあなたの創造的な友人。';
-  const subtitleEn = 'Worley Digital provides professional digital consulting and creative services to supercharge your business growth.';
-  const subtitleJa = 'ウォーリーデジタルは、ビジネスの成長を促進するためのプロフェッショナルなデジタルコンサルティングとクリエイティブサービスを提供しています。';
-  const buttonText = 'homeFeatureButtonText';
 
   return(
     <Layout
@@ -97,16 +105,12 @@ const Index = props => {
     >
       <Hero 
         title={ switchText( titleEn, titleJa ) }
-        subtitle={ switchText( subtitleEn, subtitleJa ) }
+        subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
         buttonText={buttonText}
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
-      <ServicesOffered
-        title={t('homeServicesTitle')}
-        servicesOffered={servicesOffered}
-        locale={locale}
-      />
+      <ServiceSelectTabBar />
     </Layout>
   )};
 
