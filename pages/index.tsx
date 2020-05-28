@@ -5,7 +5,7 @@ import { getInitialLocale } from '../translations/getInitialLocale'
 
 const Index: React.FC = () => {
   React.useEffect(() => {
-    window.location.replace(`/${getInitialLocale()}`)
+    window.location.replace(`/${getInitialLocale()}/`)
   })
   return (
     <Head>

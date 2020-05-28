@@ -103,7 +103,7 @@ const Hero = props => {
   const containsBgImage = props.bgImage ? { background: `url(${props.bgImage})`} : null;
 
   return(  
-    <div className={classes.wrapper} style={containsBgImage} container>
+    <div className={classes.wrapper} style={containsBgImage}>
       <div className={classes.wrapperInner}>
         <Grid container className={classes.contentContainer} spacing={2}>
           <Grid item xs={12}>

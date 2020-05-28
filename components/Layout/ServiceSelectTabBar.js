@@ -73,7 +73,7 @@ const ServicesOffered = props => {
           {
             services.map( (service, i) => {
               return (
-                <Link href={service.link}>
+                <Link href={service.link} key={i}>
                   <Tab label={t(service.text)} {...a11yProps(i)} />
                 </Link>
               )

@@ -37,9 +37,9 @@ const NavDropDown = props => {
   return (
     <div>
       <ul className={classes.navDropDown}>
-        {props.dropDownItems.map(item => {
-          return <Link href={`${locale}/${item.link}`}>
-            <li key={item.text} className={classes.listItem} onClick={props.toggleContactForm}>
+        {props.dropDownItems.map((item, i) => {
+          return <Link key={item.text} href={`${item.link}`}>
+            <li className={classes.listItem} onClick={props.toggleContactForm}>
               <p className={classes.text}>
                 {t(item.text)}
               </p>

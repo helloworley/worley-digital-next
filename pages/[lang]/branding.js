@@ -9,19 +9,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 
 // translation
-import useTranslation from '../../../hooks/useTranslation';
-import withLocale from '../../../hocs/withLocale';
-import { LocaleContext } from '../../../context/LocaleContext';
+import useTranslation from '../../hooks/useTranslation';
+import withLocale from '../../hocs/withLocale';
+import { LocaleContext } from '../../context/LocaleContext';
 
 
 // custom
-import Layout from '../../../components/MyLayout';
-import Hero from '../../../components/Layout/Hero';
-import ServicesOffered from '../../../components/Layout/ServicesOffered';
-import ServiceSelectTabBar from '../../../components/Layout/ServiceSelectTabBar';
+import Layout from '../../components/MyLayout';
+import Hero from '../../components/Layout/Hero';
+import ServicesOffered from '../../components/Layout/ServicesOffered';
+import ServiceSelectTabBar from '../../components/Layout/ServiceSelectTabBar';
 
 // data
-import pageData from '../../../data/pageBranding.json';
+import pageData from '../../data/pageBranding.json';
 const bgImage = pageData.heroBackground.en.fields.file.en.url;
 const titleEn = pageData.pageTitle.en;
 const titleJa = pageData.pageTitle.ja;
@@ -108,7 +108,6 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
-      <ServiceSelectTabBar />
     </Layout>
   )};
 

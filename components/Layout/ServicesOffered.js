@@ -61,7 +61,7 @@ const ServicesOffered = props => {
                     <Grid item xs={6} sm={4} md={2} key={i}>
                       <Link href={`/${props.locale}/${serviceOffered.link}`}>
                         <a>
-                          <BubbleWindow text={t(serviceOffered.string)} bg={serviceOffered.image}/>
+                          <BubbleWindow text={t(serviceOffered.text)} bg={serviceOffered.image}/>
                         </a>
                       </Link>
                     </Grid>

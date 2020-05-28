@@ -110,7 +110,6 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
-      <ServiceSelectTabBar />
     </Layout>
   )};
 
