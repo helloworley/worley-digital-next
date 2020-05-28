@@ -31,7 +31,7 @@ const styles = theme => createStyles({
     boxShadow: 'none',
     '&.filled': {
       // backgroundColor: 'rgba(17,17,17,.7)',
-      backgroundColor: '#5B5B5B',
+      backgroundColor: 'rgba(0,0,0,.8)',
       color: theme.palette.primary.main,
       boxShadow: theme.shadows[5],
       transition: 'background-color .3s ease-in-out, box-shadow .3s ease-in-out',

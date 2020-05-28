@@ -18,7 +18,15 @@ import ServicesOffered from '../../components/Layout/ServicesOffered';
 
 // data
 import servicesOffered from '../../data/servicesOffered';
-const bgImage = 'teamlab-2.jpg';
+
+// data
+import pageData from '../../data/pageIndex.json';
+const bgImage = pageData.heroBackground.en.fields.file.en.url;
+const titleEn = pageData.pageTitle.en;
+const titleJa = pageData.pageTitle.ja;
+const subtitleEn = pageData.pageSubtitle.en;
+const subtitleJa = pageData.pageSubtitle.ja;
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -77,15 +85,12 @@ const Index = props => {
   const { t } = useTranslation();
   const { locale } = React.useContext(LocaleContext);
 
+  const buttonText = 'homeFeatureButtonText';
+
   const switchText = ( textEn, textJa ) => {
     return locale == 'en' ? textEn : textJa;
   }
 
-  const titleEn = 'Your creative friend in the digital future.';
-  const titleJa = 'デジタルの未来にあなたの創造的な友人。';
-  const subtitleEn = 'Worley Digital provides professional digital consulting and creative services to supercharge your business growth.';
-  const subtitleJa = 'ウォーリーデジタルは、ビジネスの成長を促進するためのプロフェッショナルなデジタルコンサルティングとクリエイティブサービスを提供しています。';
-  const buttonText = 'homeFeatureButtonText';
 
   return(
     <Layout

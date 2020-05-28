@@ -54,7 +54,7 @@ const styles = theme => createStyles({
   logo: {
     color: 'text',
     cursor: 'pointer',
-    maxWidth: '70px',
+    maxWidth: '100px',
   },
   navName: {
     position: 'absolute',
@@ -64,6 +64,15 @@ const styles = theme => createStyles({
     // left: 0,
     // right: 0,
     top: '3px'
+  },
+  rightWrapper: {
+    display: 'flex',
+  },
+  LocaleSwitcher: {
+    margin: '10px 20px 0 0'
+  },
+  icon: {
+    color: '#fff'
   }
 });
 
@@ -146,17 +155,20 @@ class NavMobile extends React.Component {
     <>
       <AppBar position="fixed" className={classes.appBar} id="app-bar">
         <Toolbar className={classes.toolbar}>
-          <div className={classes.burgerContainer} onClick={this.toggleDrawer('left', true)}>
-            <IconButton edge="start" color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-          </div>
           <Link href="/">
             {/* <p className={classes.navName}>Worley Digital</p> */}
             <img className={classes.logo} src="/worley-digital-logo.svg" id="logo" />
           </Link>
-          <LocaleSwitcher />
-          {/* <img className={classes.logo} src="/ikigai-light.svg" /> */}
+          <div className={classes.rightWrapper}>
+            <div  className={classes.LocaleSwitcher}>
+              <LocaleSwitcher/>
+            </div>
+            <div className={classes.burgerContainer} onClick={this.toggleDrawer('left', true)}>
+              <IconButton edge="start" aria-label="menu" className={classes.icon}>
+                <MenuIcon />
+              </IconButton>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
 
