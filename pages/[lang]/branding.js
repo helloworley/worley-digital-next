@@ -13,12 +13,13 @@ import useTranslation from '../../hooks/useTranslation';
 import withLocale from '../../hocs/withLocale';
 import { LocaleContext } from '../../context/LocaleContext';
 
-
 // custom
 import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
 import ServicesOffered from '../../components/Layout/ServicesOffered';
 import ServiceSelectTabBar from '../../components/Layout/ServiceSelectTabBar';
+import ProjectSelector from '../../components/Layout/ProjectSelector';
+
 
 // data
 import pageData from '../../data/pageBranding.json';
@@ -108,6 +109,9 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
+      <div className={classes.contentContainer}>
+        <ProjectSelector />
+      </div>
     </Layout>
   )};
 

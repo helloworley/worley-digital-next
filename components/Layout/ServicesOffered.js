@@ -70,11 +70,10 @@ const ServicesOffered = props => {
                   const text_en = serviceOffered.fields.serviceName.en;
                   const text_ja = serviceOffered.fields.serviceName.ja;
                   const image = serviceOffered.fields.image.en.fields.file.en.url;
-                  console.log('image', image)
                   const link = serviceOffered.fields.link.en;
                   return (
                     <Grid item xs={6} sm={4} md={2} key={i}>
-                      <Link href={`/${link}`}>
+                      <Link href={`${link}`}>
                         <a className={classes.a}>
                           <BubbleWindow text={switchText(text_en, text_ja)} bg={image}/>
                         </a>

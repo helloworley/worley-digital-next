@@ -1,1 +1,965 @@
-{"slug":{"en":"ptengine"},"projectTitle":{"en":"Ptengine Branding","ja":"Ptengine ブランディング"},"projectImages":{"en":[{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"1KhqdvPuOeiKqyzc6w3B39","type":"Asset","createdAt":"2020-05-12T08:27:34.521Z","updatedAt":"2020-05-12T08:27:34.521Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Branding Kit"},"description":{"en":"Branding Kit for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/1KhqdvPuOeiKqyzc6w3B39/f685e9bead2bdd0ec673a644ff0a5779/ptengine-branding-kit-2-1.png","details":{"size":2136776,"image":{"width":1764,"height":8700}},"fileName":"ptengine-branding-kit-2-1.png","contentType":"image/png"}}}},{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"2HwwAmBygUuxBatV3UGZvr","type":"Asset","createdAt":"2020-05-12T08:28:30.771Z","updatedAt":"2020-05-12T08:28:30.771Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Event Page Design"},"description":{"en":"Event Page Design for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/2HwwAmBygUuxBatV3UGZvr/4da865cacf19ca8d292a84e3b8a3be2f/200211-Ptengine-Online-Workshops-Main.jpg","details":{"size":271727,"image":{"width":1200,"height":2218}},"fileName":"200211-Ptengine-Online-Workshops-Main.jpg","contentType":"image/jpeg"}}}},{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"5yKGYNx8TnlmeTw8RUMjvN","type":"Asset","createdAt":"2020-05-12T08:29:43.276Z","updatedAt":"2020-05-12T08:29:43.276Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Branded Email Template Mockup"},"description":{"en":"Email Template Mockup for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/5yKGYNx8TnlmeTw8RUMjvN/87ef367dcc64021431492e7bbf01f609/Email-Newsletter-1.png","details":{"size":548843,"image":{"width":768,"height":2291}},"fileName":"Email-Newsletter-1.png","contentType":"image/png"}}}},{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"1nE90P6vftfTkCzrD3FQQX","type":"Asset","createdAt":"2020-05-12T08:30:33.536Z","updatedAt":"2020-05-12T08:30:33.536Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Event Page Mockup 2"},"description":{"en":"Event Page Mockup for Ptengine 2"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/1nE90P6vftfTkCzrD3FQQX/39b5bc64097121f99ec96d7d0bcbfb56/200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg","details":{"size":205696,"image":{"width":1167,"height":2560}},"fileName":"200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg","contentType":"image/jpeg"}}}},{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"NsX8A5mz1CxebCw56g8Ri","type":"Asset","createdAt":"2020-05-12T08:31:27.624Z","updatedAt":"2020-05-12T08:31:27.624Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Email Example"},"description":{"en":"Email Example for Ptengine branded newsletter"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/NsX8A5mz1CxebCw56g8Ri/25897069bba7d7e42aa6a4912a63afaa/email-example.png","details":{"size":2278520,"image":{"width":1335,"height":6557}},"fileName":"email-example.png","contentType":"image/png"}}}}]},"projectContent":{"en":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"About","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"},{"data":{"uri":"https://www.ptengine.jp/"},"content":[{"data":{},"marks":[],"value":"Ptengine","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":" is a data analytics and conversion platform created by ","nodeType":"text"},{"data":{"uri":"https://jp.ptmind.com/"},"content":[{"data":{},"marks":[],"value":"Ptmind","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":". As the Designer and Marketer in the Tokyo office, I headed all design/branding for marketing projects while I was there.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Branding Kit","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"※I did not create the Main Logo.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Events Page Mockup","nodeType":"text"}],"nodeType":"heading-3"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"1KhqdvPuOeiKqyzc6w3B39","type":"Asset","createdAt":"2020-05-12T08:27:34.521Z","updatedAt":"2020-05-12T08:27:34.521Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Branding Kit"},"description":{"en":"Branding Kit for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/1KhqdvPuOeiKqyzc6w3B39/f685e9bead2bdd0ec673a644ff0a5779/ptengine-branding-kit-2-1.png","details":{"size":2136776,"image":{"width":1764,"height":8700}},"fileName":"ptengine-branding-kit-2-1.png","contentType":"image/png"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Event Page Mockup","nodeType":"text"}],"nodeType":"heading-3"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"2HwwAmBygUuxBatV3UGZvr","type":"Asset","createdAt":"2020-05-12T08:28:30.771Z","updatedAt":"2020-05-12T08:28:30.771Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Event Page Design"},"description":{"en":"Event Page Design for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/2HwwAmBygUuxBatV3UGZvr/4da865cacf19ca8d292a84e3b8a3be2f/200211-Ptengine-Online-Workshops-Main.jpg","details":{"size":271727,"image":{"width":1200,"height":2218}},"fileName":"200211-Ptengine-Online-Workshops-Main.jpg","contentType":"image/jpeg"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"1nE90P6vftfTkCzrD3FQQX","type":"Asset","createdAt":"2020-05-12T08:30:33.536Z","updatedAt":"2020-05-12T08:30:33.536Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Event Page Mockup 2"},"description":{"en":"Event Page Mockup for Ptengine 2"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/1nE90P6vftfTkCzrD3FQQX/39b5bc64097121f99ec96d7d0bcbfb56/200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg","details":{"size":205696,"image":{"width":1167,"height":2560}},"fileName":"200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg","contentType":"image/jpeg"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Branded Email Template Mockup","nodeType":"text"}],"nodeType":"heading-3"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"5yKGYNx8TnlmeTw8RUMjvN","type":"Asset","createdAt":"2020-05-12T08:29:43.276Z","updatedAt":"2020-05-12T08:29:43.276Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Branded Email Template Mockup"},"description":{"en":"Email Template Mockup for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/5yKGYNx8TnlmeTw8RUMjvN/87ef367dcc64021431492e7bbf01f609/Email-Newsletter-1.png","details":{"size":548843,"image":{"width":768,"height":2291}},"fileName":"Email-Newsletter-1.png","contentType":"image/png"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"With a Branded HTML email template set up in Intercom, the Customer Success team was able to easily create their weekly newsletter for all users.","nodeType":"text"}],"nodeType":"paragraph"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"NsX8A5mz1CxebCw56g8Ri","type":"Asset","createdAt":"2020-05-12T08:31:27.624Z","updatedAt":"2020-05-12T08:31:27.624Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Email Example"},"description":{"en":"Email Example for Ptengine branded newsletter"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/NsX8A5mz1CxebCw56g8Ri/25897069bba7d7e42aa6a4912a63afaa/email-example.png","details":{"size":2278520,"image":{"width":1335,"height":6557}},"fileName":"email-example.png","contentType":"image/png"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"},"ja":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"About","nodeType":"text"}],"nodeType":"heading-2"},{"data":{},"content":[{"data":{},"marks":[],"value":"Ptengineは、Ptmindによって作成されたデータ分析および変換プラットフォームです。 東京オフィスのデザイナー兼マーケティング担当者として、私はそこにいる間、マーケティングプロジェクトのすべてのデザイン/ブランディングの責任者を務めました。","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"ブランディングキット","nodeType":"text"}],"nodeType":"heading-3"},{"data":{},"content":[{"data":{},"marks":[],"value":"※メインロゴは作成していません。","nodeType":"text"}],"nodeType":"paragraph"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"1KhqdvPuOeiKqyzc6w3B39","type":"Asset","createdAt":"2020-05-12T08:27:34.521Z","updatedAt":"2020-05-12T08:27:34.521Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Branding Kit"},"description":{"en":"Branding Kit for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/1KhqdvPuOeiKqyzc6w3B39/f685e9bead2bdd0ec673a644ff0a5779/ptengine-branding-kit-2-1.png","details":{"size":2136776,"image":{"width":1764,"height":8700}},"fileName":"ptengine-branding-kit-2-1.png","contentType":"image/png"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"イベントページのモックアップ","nodeType":"text"}],"nodeType":"heading-3"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"2HwwAmBygUuxBatV3UGZvr","type":"Asset","createdAt":"2020-05-12T08:28:30.771Z","updatedAt":"2020-05-12T08:28:30.771Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Event Page Design"},"description":{"en":"Event Page Design for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/2HwwAmBygUuxBatV3UGZvr/4da865cacf19ca8d292a84e3b8a3be2f/200211-Ptengine-Online-Workshops-Main.jpg","details":{"size":271727,"image":{"width":1200,"height":2218}},"fileName":"200211-Ptengine-Online-Workshops-Main.jpg","contentType":"image/jpeg"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"1nE90P6vftfTkCzrD3FQQX","type":"Asset","createdAt":"2020-05-12T08:30:33.536Z","updatedAt":"2020-05-12T08:30:33.536Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Event Page Mockup 2"},"description":{"en":"Event Page Mockup for Ptengine 2"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/1nE90P6vftfTkCzrD3FQQX/39b5bc64097121f99ec96d7d0bcbfb56/200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg","details":{"size":205696,"image":{"width":1167,"height":2560}},"fileName":"200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg","contentType":"image/jpeg"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"ブランド付きメールテンプレートモックアップ","nodeType":"text"}],"nodeType":"heading-3"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"5yKGYNx8TnlmeTw8RUMjvN","type":"Asset","createdAt":"2020-05-12T08:29:43.276Z","updatedAt":"2020-05-12T08:29:43.276Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Branded Email Template Mockup"},"description":{"en":"Email Template Mockup for Ptengine"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/5yKGYNx8TnlmeTw8RUMjvN/87ef367dcc64021431492e7bbf01f609/Email-Newsletter-1.png","details":{"size":548843,"image":{"width":768,"height":2291}},"fileName":"Email-Newsletter-1.png","contentType":"image/png"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"ブランド化されたHTMLメールテンプレートがインターコムで設定されたため、カスタマーサクセスチームは、すべてのユーザー向けの週刊ニュースレターを簡単に作成できました。","nodeType":"text"}],"nodeType":"paragraph"},{"data":{"target":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"NsX8A5mz1CxebCw56g8Ri","type":"Asset","createdAt":"2020-05-12T08:31:27.624Z","updatedAt":"2020-05-12T08:31:27.624Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"Ptengine Email Example"},"description":{"en":"Email Example for Ptengine branded newsletter"},"file":{"en":{"url":"//images.ctfassets.net/p0ly3e00wdqi/NsX8A5mz1CxebCw56g8Ri/25897069bba7d7e42aa6a4912a63afaa/email-example.png","details":{"size":2278520,"image":{"width":1335,"height":6557}},"fileName":"email-example.png","contentType":"image/png"}}}}},"content":[],"nodeType":"embedded-asset-block"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}}}
+{
+  "slug": {
+    "en": "ptengine"
+  },
+  "projectTitle": {
+    "en": "Ptengine Branding",
+    "ja": "Ptengine ブランディング"
+  },
+  "projectImages": {
+    "en": [{
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "1KhqdvPuOeiKqyzc6w3B39",
+        "type": "Asset",
+        "createdAt": "2020-05-12T08:27:34.521Z",
+        "updatedAt": "2020-05-12T08:27:34.521Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en": "Ptengine Branding Kit"
+        },
+        "description": {
+          "en": "Branding Kit for Ptengine"
+        },
+        "file": {
+          "en": {
+            "url": "https://images.ctfassets.net/p0ly3e00wdqi/1KhqdvPuOeiKqyzc6w3B39/f685e9bead2bdd0ec673a644ff0a5779/ptengine-branding-kit-2-1.png",
+            "details": {
+              "size": 2136776,
+              "image": {
+                "width": 1764,
+                "height": 8700
+              }
+            },
+            "fileName": "ptengine-branding-kit-2-1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "2HwwAmBygUuxBatV3UGZvr",
+        "type": "Asset",
+        "createdAt": "2020-05-12T08:28:30.771Z",
+        "updatedAt": "2020-05-12T08:28:30.771Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en": "Ptengine Event Page Design"
+        },
+        "description": {
+          "en": "Event Page Design for Ptengine"
+        },
+        "file": {
+          "en": {
+            "url": "https://images.ctfassets.net/p0ly3e00wdqi/2HwwAmBygUuxBatV3UGZvr/4da865cacf19ca8d292a84e3b8a3be2f/200211-Ptengine-Online-Workshops-Main.jpg",
+            "details": {
+              "size": 271727,
+              "image": {
+                "width": 1200,
+                "height": 2218
+              }
+            },
+            "fileName": "200211-Ptengine-Online-Workshops-Main.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "5yKGYNx8TnlmeTw8RUMjvN",
+        "type": "Asset",
+        "createdAt": "2020-05-12T08:29:43.276Z",
+        "updatedAt": "2020-05-12T08:29:43.276Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en": "Branded Email Template Mockup"
+        },
+        "description": {
+          "en": "Email Template Mockup for Ptengine"
+        },
+        "file": {
+          "en": {
+            "url": "https://images.ctfassets.net/p0ly3e00wdqi/5yKGYNx8TnlmeTw8RUMjvN/87ef367dcc64021431492e7bbf01f609/Email-Newsletter-1.png",
+            "details": {
+              "size": 548843,
+              "image": {
+                "width": 768,
+                "height": 2291
+              }
+            },
+            "fileName": "Email-Newsletter-1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "1nE90P6vftfTkCzrD3FQQX",
+        "type": "Asset",
+        "createdAt": "2020-05-12T08:30:33.536Z",
+        "updatedAt": "2020-05-12T08:30:33.536Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en": "Ptengine Event Page Mockup 2"
+        },
+        "description": {
+          "en": "Event Page Mockup for Ptengine 2"
+        },
+        "file": {
+          "en": {
+            "url": "https://images.ctfassets.net/p0ly3e00wdqi/1nE90P6vftfTkCzrD3FQQX/39b5bc64097121f99ec96d7d0bcbfb56/200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg",
+            "details": {
+              "size": 205696,
+              "image": {
+                "width": 1167,
+                "height": 2560
+              }
+            },
+            "fileName": "200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "NsX8A5mz1CxebCw56g8Ri",
+        "type": "Asset",
+        "createdAt": "2020-05-12T08:31:27.624Z",
+        "updatedAt": "2020-05-12T08:31:27.624Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en": "Ptengine Email Example"
+        },
+        "description": {
+          "en": "Email Example for Ptengine branded newsletter"
+        },
+        "file": {
+          "en": {
+            "url": "https://images.ctfassets.net/p0ly3e00wdqi/NsX8A5mz1CxebCw56g8Ri/25897069bba7d7e42aa6a4912a63afaa/email-example.png",
+            "details": {
+              "size": 2278520,
+              "image": {
+                "width": 1335,
+                "height": 6557
+              }
+            },
+            "fileName": "email-example.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }]
+  },
+  "projectContent": {
+    "en": {
+      "data": {},
+      "content": [{
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "About",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-2"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "",
+          "nodeType": "text"
+        }, {
+          "data": {
+            "uri": "https://www.ptengine.jp/"
+          },
+          "content": [{
+            "data": {},
+            "marks": [],
+            "value": "Ptengine",
+            "nodeType": "text"
+          }],
+          "nodeType": "hyperlink"
+        }, {
+          "data": {},
+          "marks": [],
+          "value": " is a data analytics and conversion platform created by ",
+          "nodeType": "text"
+        }, {
+          "data": {
+            "uri": "https://jp.ptmind.com/"
+          },
+          "content": [{
+            "data": {},
+            "marks": [],
+            "value": "Ptmind",
+            "nodeType": "text"
+          }],
+          "nodeType": "hyperlink"
+        }, {
+          "data": {},
+          "marks": [],
+          "value": ". As the Designer and Marketer in the Tokyo office, I headed all design/branding for marketing projects while I was there.",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "Branding Kit",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-3"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "※I did not create the Main Logo.",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "Events Page Mockup",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-3"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "1KhqdvPuOeiKqyzc6w3B39",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:27:34.521Z",
+              "updatedAt": "2020-05-12T08:27:34.521Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Ptengine Branding Kit"
+              },
+              "description": {
+                "en": "Branding Kit for Ptengine"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/1KhqdvPuOeiKqyzc6w3B39/f685e9bead2bdd0ec673a644ff0a5779/ptengine-branding-kit-2-1.png",
+                  "details": {
+                    "size": 2136776,
+                    "image": {
+                      "width": 1764,
+                      "height": 8700
+                    }
+                  },
+                  "fileName": "ptengine-branding-kit-2-1.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "Event Page Mockup",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-3"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "2HwwAmBygUuxBatV3UGZvr",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:28:30.771Z",
+              "updatedAt": "2020-05-12T08:28:30.771Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Ptengine Event Page Design"
+              },
+              "description": {
+                "en": "Event Page Design for Ptengine"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/2HwwAmBygUuxBatV3UGZvr/4da865cacf19ca8d292a84e3b8a3be2f/200211-Ptengine-Online-Workshops-Main.jpg",
+                  "details": {
+                    "size": 271727,
+                    "image": {
+                      "width": 1200,
+                      "height": 2218
+                    }
+                  },
+                  "fileName": "200211-Ptengine-Online-Workshops-Main.jpg",
+                  "contentType": "image/jpeg"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "1nE90P6vftfTkCzrD3FQQX",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:30:33.536Z",
+              "updatedAt": "2020-05-12T08:30:33.536Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Ptengine Event Page Mockup 2"
+              },
+              "description": {
+                "en": "Event Page Mockup for Ptengine 2"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/1nE90P6vftfTkCzrD3FQQX/39b5bc64097121f99ec96d7d0bcbfb56/200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg",
+                  "details": {
+                    "size": 205696,
+                    "image": {
+                      "width": 1167,
+                      "height": 2560
+                    }
+                  },
+                  "fileName": "200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg",
+                  "contentType": "image/jpeg"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "Branded Email Template Mockup",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-3"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "5yKGYNx8TnlmeTw8RUMjvN",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:29:43.276Z",
+              "updatedAt": "2020-05-12T08:29:43.276Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Branded Email Template Mockup"
+              },
+              "description": {
+                "en": "Email Template Mockup for Ptengine"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/5yKGYNx8TnlmeTw8RUMjvN/87ef367dcc64021431492e7bbf01f609/Email-Newsletter-1.png",
+                  "details": {
+                    "size": 548843,
+                    "image": {
+                      "width": 768,
+                      "height": 2291
+                    }
+                  },
+                  "fileName": "Email-Newsletter-1.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "With a Branded HTML email template set up in Intercom, the Customer Success team was able to easily create their weekly newsletter for all users.",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "NsX8A5mz1CxebCw56g8Ri",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:31:27.624Z",
+              "updatedAt": "2020-05-12T08:31:27.624Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Ptengine Email Example"
+              },
+              "description": {
+                "en": "Email Example for Ptengine branded newsletter"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/NsX8A5mz1CxebCw56g8Ri/25897069bba7d7e42aa6a4912a63afaa/email-example.png",
+                  "details": {
+                    "size": 2278520,
+                    "image": {
+                      "width": 1335,
+                      "height": 6557
+                    }
+                  },
+                  "fileName": "email-example.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }],
+      "nodeType": "document"
+    },
+    "ja": {
+      "data": {},
+      "content": [{
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "About",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-2"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "Ptengineは、Ptmindによって作成されたデータ分析および変換プラットフォームです。 東京オフィスのデザイナー兼マーケティング担当者として、私はそこにいる間、マーケティングプロジェクトのすべてのデザイン/ブランディングの責任者を務めました。",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "ブランディングキット",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-3"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "※メインロゴは作成していません。",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "1KhqdvPuOeiKqyzc6w3B39",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:27:34.521Z",
+              "updatedAt": "2020-05-12T08:27:34.521Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Ptengine Branding Kit"
+              },
+              "description": {
+                "en": "Branding Kit for Ptengine"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/1KhqdvPuOeiKqyzc6w3B39/f685e9bead2bdd0ec673a644ff0a5779/ptengine-branding-kit-2-1.png",
+                  "details": {
+                    "size": 2136776,
+                    "image": {
+                      "width": 1764,
+                      "height": 8700
+                    }
+                  },
+                  "fileName": "ptengine-branding-kit-2-1.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "イベントページのモックアップ",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-3"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "2HwwAmBygUuxBatV3UGZvr",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:28:30.771Z",
+              "updatedAt": "2020-05-12T08:28:30.771Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Ptengine Event Page Design"
+              },
+              "description": {
+                "en": "Event Page Design for Ptengine"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/2HwwAmBygUuxBatV3UGZvr/4da865cacf19ca8d292a84e3b8a3be2f/200211-Ptengine-Online-Workshops-Main.jpg",
+                  "details": {
+                    "size": 271727,
+                    "image": {
+                      "width": 1200,
+                      "height": 2218
+                    }
+                  },
+                  "fileName": "200211-Ptengine-Online-Workshops-Main.jpg",
+                  "contentType": "image/jpeg"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "1nE90P6vftfTkCzrD3FQQX",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:30:33.536Z",
+              "updatedAt": "2020-05-12T08:30:33.536Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Ptengine Event Page Mockup 2"
+              },
+              "description": {
+                "en": "Event Page Mockup for Ptengine 2"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/1nE90P6vftfTkCzrD3FQQX/39b5bc64097121f99ec96d7d0bcbfb56/200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg",
+                  "details": {
+                    "size": 205696,
+                    "image": {
+                      "width": 1167,
+                      "height": 2560
+                    }
+                  },
+                  "fileName": "200211-Ptengine-Online-Workshop-Details-Round-1-Upcoming-Webinar-scaled.jpg",
+                  "contentType": "image/jpeg"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "ブランド付きメールテンプレートモックアップ",
+          "nodeType": "text"
+        }],
+        "nodeType": "heading-3"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "5yKGYNx8TnlmeTw8RUMjvN",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:29:43.276Z",
+              "updatedAt": "2020-05-12T08:29:43.276Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Branded Email Template Mockup"
+              },
+              "description": {
+                "en": "Email Template Mockup for Ptengine"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/5yKGYNx8TnlmeTw8RUMjvN/87ef367dcc64021431492e7bbf01f609/Email-Newsletter-1.png",
+                  "details": {
+                    "size": 548843,
+                    "image": {
+                      "width": 768,
+                      "height": 2291
+                    }
+                  },
+                  "fileName": "Email-Newsletter-1.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "ブランド化されたHTMLメールテンプレートがインターコムで設定されたため、カスタマーサクセスチームは、すべてのユーザー向けの週刊ニュースレターを簡単に作成できました。",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }, {
+        "data": {
+          "target": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "NsX8A5mz1CxebCw56g8Ri",
+              "type": "Asset",
+              "createdAt": "2020-05-12T08:31:27.624Z",
+              "updatedAt": "2020-05-12T08:31:27.624Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Ptengine Email Example"
+              },
+              "description": {
+                "en": "Email Example for Ptengine branded newsletter"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/NsX8A5mz1CxebCw56g8Ri/25897069bba7d7e42aa6a4912a63afaa/email-example.png",
+                  "details": {
+                    "size": 2278520,
+                    "image": {
+                      "width": 1335,
+                      "height": 6557
+                    }
+                  },
+                  "fileName": "email-example.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        },
+        "content": [],
+        "nodeType": "embedded-asset-block"
+      }, {
+        "data": {},
+        "content": [{
+          "data": {},
+          "marks": [],
+          "value": "",
+          "nodeType": "text"
+        }],
+        "nodeType": "paragraph"
+      }],
+      "nodeType": "document"
+    }
+  }
+}
