@@ -16,8 +16,6 @@ import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
 import ServicesOffered from '../../components/Layout/ServicesOffered';
 
-// data
-import servicesOffered from '../../data/servicesOffered';
 
 // data
 import pageData from '../../data/pageIndex.json';
@@ -26,6 +24,7 @@ const titleEn = pageData.pageTitle.en;
 const titleJa = pageData.pageTitle.ja;
 const subtitleEn = pageData.pageSubtitle.en;
 const subtitleJa = pageData.pageSubtitle.ja;
+const servicesOffered = pageData.services.en;
 
 
 const useStyles = makeStyles(theme => ({

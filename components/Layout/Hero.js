@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
     // }
   },
   wrapperInner: {
-    backgroundColor: 'rgba(17,17,17,.7)',
+    backgroundColor: 'rgba(0,0,0,.6)',
     padding: '120px 24px 80px',
     [theme.breakpoints.up('md')]: {
       padding: '200px 0 140px',

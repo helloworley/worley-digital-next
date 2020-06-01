@@ -6,6 +6,15 @@ import Grid from '@material-ui/core/Grid';
 const styles = theme => createStyles({
   bubbleWindow: {
     cursor: 'pointer',
+    color: '#bbb',
+    '&:hover h4': {
+      color: '#616161',
+      transition: '.5s'
+    },
+    '&:hover div': {
+      boxShadow: '0 10px 16px 0 rgba(0, 0, 0, 0.25)',
+      transition: '.5s'
+    }
   },
   image: {
     height: '120px',
@@ -15,6 +24,7 @@ const styles = theme => createStyles({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     borderRadius: '50%',
+    boxShadow: '0 10px 16px 0 rgba(0, 0, 0, 0.1)',
     [theme.breakpoints.up('sm')]: {
       height: '180px',
       width: '180px',
@@ -30,17 +40,24 @@ const styles = theme => createStyles({
   },
   text: {
     textAlign: 'center',
+    
+   
   }
 });
 
 class BubbleWindow extends React.Component {
   render() {
 
-    const { classes, props } = this.props;
+    const { classes } = this.props;
+    console.log('props', this.props.bg)
+
+    const imageStyle = {
+      backgroundImage: `url("${this.props.bg}")`
+    }
 
     return (
       <div className={classes.bubbleWindow}>
-        <div className={classes.image} style={{backgroundImage: `url(${this.props.image})}`}}></div>
+        <div className={classes.image} style={imageStyle}></div>
         <h4 className={classes.text}>{this.props.text}</h4>
       </div>
     )

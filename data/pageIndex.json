@@ -1,1 +1,555 @@
-{"pageTitle":{"en":"Your creative friend in the digital future.","ja":"デジタルの未来にあなたの創造的な友人。"},"pageSubtitle":{"en":"Worley Digital provides professional digital consulting and creative services to supercharge your business growth.","ja":"ウォーリーデジタルは、ビジネスの成長を促進するためのプロフェッショナルなデジタルコンサルティングとクリエイティブサービスを提供しています。"},"heroBackground":{"en":{"sys":{"space":{"sys":{"type":"Link","linkType":"Space","id":"p0ly3e00wdqi"}},"id":"3hFpUXM5N2j359FtIA9pl9","type":"Asset","createdAt":"2020-05-28T15:20:54.821Z","updatedAt":"2020-05-28T15:20:54.821Z","environment":{"sys":{"id":"master","type":"Link","linkType":"Environment"}},"revision":1},"fields":{"title":{"en":"teamlab-2"},"file":{"en":{"url":"https://images.ctfassets.net/p0ly3e00wdqi/3hFpUXM5N2j359FtIA9pl9/a5e889f8990d13325248849f05a9527a/teamlab-2.jpg","details":{"size":2018614,"image":{"width":5184,"height":3456}},"fileName":"teamlab-2.jpg","contentType":"image/jpeg"}}}}}}
+{
+  "pageTitle": {
+    "en": "Your creative friend in the digital future.",
+    "ja": "デジタルの未来にあなたの創造的な友人。"
+  },
+  "pageSubtitle": {
+    "en": "Worley Digital provides professional digital consulting and creative services to supercharge your business growth.",
+    "ja": "ウォーリーデジタルは、ビジネスの成長を促進するためのプロフェッショナルなデジタルコンサルティングとクリエイティブサービスを提供しています。"
+  },
+  "heroBackground": {
+    "en": {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "3hFpUXM5N2j359FtIA9pl9",
+        "type": "Asset",
+        "createdAt": "2020-05-28T15:20:54.821Z",
+        "updatedAt": "2020-05-28T15:20:54.821Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1
+      },
+      "fields": {
+        "title": {
+          "en": "teamlab-2"
+        },
+        "file": {
+          "en": {
+            "url": "https://images.ctfassets.net/p0ly3e00wdqi/3hFpUXM5N2j359FtIA9pl9/a5e889f8990d13325248849f05a9527a/teamlab-2.jpg",
+            "details": {
+              "size": 2018614,
+              "image": {
+                "width": 5184,
+                "height": 3456
+              }
+            },
+            "fileName": "teamlab-2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  },
+  "services": {
+    "en": [{
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "y8OJqivBMPVXCbnn3imCT",
+        "type": "Entry",
+        "createdAt": "2020-05-29T06:18:39.050Z",
+        "updatedAt": "2020-05-29T06:18:39.050Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "serviceOffered"
+          }
+        }
+      },
+      "fields": {
+        "serviceName": {
+          "en": "Branding",
+          "ja": "ブランディング"
+        },
+        "link": {
+          "en": "branding"
+        },
+        "image": {
+          "en": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "1LBLI9gT2PP5Uy2bt67wy9",
+              "type": "Asset",
+              "createdAt": "2020-05-29T06:18:25.215Z",
+              "updatedAt": "2020-05-29T06:18:25.215Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Branding Tile - PKMASA"
+              },
+              "description": {
+                "en": "Tile for PKMASA"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/1LBLI9gT2PP5Uy2bt67wy9/601f3f7ab28b8c37afb90642a0fc9d78/tile-pkmasa.png",
+                  "details": {
+                    "size": 27897,
+                    "image": {
+                      "width": 401,
+                      "height": 383
+                    }
+                  },
+                  "fileName": "tile-pkmasa.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "1x5GIns6xVcCi8hBmuWSsa",
+        "type": "Entry",
+        "createdAt": "2020-05-29T06:20:49.427Z",
+        "updatedAt": "2020-05-29T06:20:49.427Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "serviceOffered"
+          }
+        }
+      },
+      "fields": {
+        "serviceName": {
+          "en": "Photography",
+          "ja": "フォトグラフィ"
+        },
+        "link": {
+          "en": "photography"
+        },
+        "image": {
+          "en": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "7uPyUDweM8j2qZ1BO5ltkV",
+              "type": "Asset",
+              "createdAt": "2020-05-29T06:20:37.940Z",
+              "updatedAt": "2020-05-29T06:20:37.940Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Tile Photography - Suzi"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/7uPyUDweM8j2qZ1BO5ltkV/a122f8e16d6a8e7ae1152480388c2b8b/tile-suzi.png",
+                  "details": {
+                    "size": 400060,
+                    "image": {
+                      "width": 401,
+                      "height": 383
+                    }
+                  },
+                  "fileName": "tile-suzi.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "2NTFcarZABY7qupmmxoYam",
+        "type": "Entry",
+        "createdAt": "2020-05-29T06:29:59.378Z",
+        "updatedAt": "2020-05-29T06:29:59.378Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "serviceOffered"
+          }
+        }
+      },
+      "fields": {
+        "serviceName": {
+          "en": "Marketing",
+          "ja": "マーケティング"
+        },
+        "link": {
+          "en": "marketing"
+        },
+        "image": {
+          "en": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "5Uix4qgfTtYJuvIRuTGTWt",
+              "type": "Asset",
+              "createdAt": "2020-05-29T06:29:49.358Z",
+              "updatedAt": "2020-05-29T06:29:49.358Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Tile Marketing - Services Offered"
+              },
+              "description": {
+                "en": "Marketing services offered from Worley Digital"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/5Uix4qgfTtYJuvIRuTGTWt/71666fe640659dbb1d6e9f8a029eda19/tile-marketing.png",
+                  "details": {
+                    "size": 99376,
+                    "image": {
+                      "width": 401,
+                      "height": 383
+                    }
+                  },
+                  "fileName": "tile-marketing.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "6Y9jO5T8UQYbudikHE2LTd",
+        "type": "Entry",
+        "createdAt": "2020-05-29T07:02:56.386Z",
+        "updatedAt": "2020-05-29T07:02:56.386Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "serviceOffered"
+          }
+        }
+      },
+      "fields": {
+        "serviceName": {
+          "en": "UX Design",
+          "ja": "UXデザイン"
+        },
+        "link": {
+          "en": "ux-design"
+        },
+        "image": {
+          "en": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "4tQI2TUfGqj9dRJBbHAqUV",
+              "type": "Asset",
+              "createdAt": "2020-05-29T07:02:47.558Z",
+              "updatedAt": "2020-05-29T07:02:47.558Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "UX Design Tile"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/4tQI2TUfGqj9dRJBbHAqUV/aeb6bb0a8dc3384558cdf14e7a4467f1/tile-uxdesign.png",
+                  "details": {
+                    "size": 123056,
+                    "image": {
+                      "width": 401,
+                      "height": 383
+                    }
+                  },
+                  "fileName": "tile-uxdesign.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "1IHFrOgtenH4GchFfnCLdt",
+        "type": "Entry",
+        "createdAt": "2020-05-29T07:07:31.265Z",
+        "updatedAt": "2020-05-29T07:07:31.265Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "serviceOffered"
+          }
+        }
+      },
+      "fields": {
+        "serviceName": {
+          "en": "UI Design",
+          "ja": "UIデザイン"
+        },
+        "link": {
+          "en": "ui-design"
+        },
+        "image": {
+          "en": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "5tiGULTE55SEAWpt3BJJzz",
+              "type": "Asset",
+              "createdAt": "2020-05-29T07:07:26.791Z",
+              "updatedAt": "2020-05-29T07:07:26.791Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "UI Design Service Tile"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/5tiGULTE55SEAWpt3BJJzz/401f1969c1aaf5bba092b9000689cca3/tile-uidesign.png",
+                  "details": {
+                    "size": 52060,
+                    "image": {
+                      "width": 401,
+                      "height": 383
+                    }
+                  },
+                  "fileName": "tile-uidesign.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "p0ly3e00wdqi"
+          }
+        },
+        "id": "TfXb8YckSjVUXs03uSh6E",
+        "type": "Entry",
+        "createdAt": "2020-05-29T07:09:08.422Z",
+        "updatedAt": "2020-05-29T07:09:08.422Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "serviceOffered"
+          }
+        }
+      },
+      "fields": {
+        "serviceName": {
+          "en": "Website Creation",
+          "ja": "ウェブサイト作成"
+        },
+        "link": {
+          "en": "website-creation"
+        },
+        "image": {
+          "en": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "p0ly3e00wdqi"
+                }
+              },
+              "id": "3hHQdnernbqlCNKvYQ7bi5",
+              "type": "Asset",
+              "createdAt": "2020-05-29T07:08:51.008Z",
+              "updatedAt": "2020-05-29T07:08:51.008Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "revision": 1
+            },
+            "fields": {
+              "title": {
+                "en": "Website Creation Service Tile"
+              },
+              "file": {
+                "en": {
+                  "url": "https://images.ctfassets.net/p0ly3e00wdqi/3hHQdnernbqlCNKvYQ7bi5/f8c4ee2636dc755cbbdbec8417be0cfb/tile-website-creation.png",
+                  "details": {
+                    "size": 94175,
+                    "image": {
+                      "width": 401,
+                      "height": 383
+                    }
+                  },
+                  "fileName": "tile-website-creation.png",
+                  "contentType": "image/png"
+                }
+              }
+            }
+          }
+        }
+      }
+    }]
+  }
+}
