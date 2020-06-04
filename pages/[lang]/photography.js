@@ -19,6 +19,7 @@ import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
 import ServicesOffered from '../../components/Layout/ServicesOffered';
 import ServiceSelectTabBar from '../../components/Layout/ServiceSelectTabBar';
+import Gallery from '../../components/Layout/Gallery';
 
 // data
 import pageData from '../../data/pagePhotography.json';
@@ -29,6 +30,7 @@ const titleJa = pageData.title.ja;
 // const titleJa = 'フォトグラフィ';
 const pageSubtitleEn = pageData.subtitle.en;
 const pageSubtitleJa = pageData.subtitle.ja;
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -110,6 +112,8 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
+
+      <Gallery elements={pageData.images.en} />
     </Layout>
   )};
 
