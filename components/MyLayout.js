@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import { Grid, Hidden } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -10,6 +11,10 @@ import ContactFormWrapper from './Form/ContactFormWrapper';
 // translation
 import useTranslation from '../hooks/useTranslation';
 import { LocaleContext } from '../context/LocaleContext';
+
+// GA
+import React from 'react';
+import { initGA, logPageView } from '../utils/analytics';
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -46,6 +51,15 @@ const Layout = props => {
 
   const { t } = useTranslation();
   const { locale } = React.useContext(LocaleContext)
+
+  useEffect(() => {
+    // code to run on component mount
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
+  }, [])
 
   return (
     <>
