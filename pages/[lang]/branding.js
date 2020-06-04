@@ -109,9 +109,9 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
-      <div className={classes.contentContainer}>
+      
         <ProjectSelector />
-      </div>
+        
     </Layout>
   )};
 

@@ -42,7 +42,12 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
   },
   sectionTitle: {
-    margin: '0 0 40px',
+    margin: '0 0 64px',
+  },
+  bubbleWindowWrapper: {
+    [theme.breakpoints.up('md')]: {
+      margin: '0 auto'
+    },
   }
 }));
 
@@ -72,7 +77,7 @@ const ServicesOffered = props => {
                   const image = serviceOffered.fields.image.en.fields.file.en.url;
                   const link = serviceOffered.fields.link.en;
                   return (
-                    <Grid item xs={6} sm={4} md={2} key={i}>
+                    <Grid item xs={6} sm={4} md={2} key={i} className={classes.bubbleWindowWrapper}>
                       <Link href={`${link}`}>
                         <a className={classes.a}>
                           <BubbleWindow text={switchText(text_en, text_ja)} bg={image}/>

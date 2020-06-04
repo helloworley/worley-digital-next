@@ -22,7 +22,14 @@ import projectPtengine from '../../data/brandingExample-ptengine.json';
 const useStyles = makeStyles(theme => ({
   wrapper: {
     margin: '80px 0 120px',
-  }
+  },
+  contentContainer: {
+    // maxWidth: '95%',
+    // margin: '0 auto',
+    [theme.breakpoints.up('sm')]: {
+      padding: '0 40px',
+    },
+  },
 }));
 
 const ProjectSelector = props => {
@@ -31,8 +38,6 @@ const ProjectSelector = props => {
   
   const [state, setState] = React.useState({
     selectedProject: 'PKMASA Branding',
-    pageContentEn: projectPtengine.projectContent.en.content,
-    pageContentJa: projectPtengine.projectContent.ja.content,
   });
 
   const showProject = data => {
@@ -41,7 +46,9 @@ const ProjectSelector = props => {
       selectedProject: data,
       projectTitleEn: data.projectTitle.en,
       projectTitleJa: data.projectTitle.ja,
-      projectImages: data.projectImages
+      projectImages: data.projectImages,
+      pageContentEn: data.projectContent.en.content,
+      pageContentJa: data.projectContent.ja.content,
     });
   }
 
@@ -49,28 +56,13 @@ const ProjectSelector = props => {
     return locale == 'en' ? textEn : textJa;
   }
 
-  const testData = [
-    {
-      nodeType: 'paragraph',
-      content: [
-        {
-          nodeType: 'text',
-          value: 'Hello world!',
-          marks: [{ type: 'bold' }],
-        },
-        {
-          nodeType: 'text',
-          value: 'Hello world!',
-          marks: [],
-        },
-      ],
-    },
-  ]
-
-  console.log('project', projectPtengine)
+  console.log('project', projectPtengine);
+  
 
   return(  
-    <Grid className={classes.wrapper} container spacing={10}>
+    <div className={classes.contentContainer}>
+
+      <Grid className={classes.wrapper} container spacing={4}>
 
       <Grid item xs={12}>
         <Typography variant="h1">
@@ -79,31 +71,38 @@ const ProjectSelector = props => {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} sm={3} md={4}>
-        <ProjectCard 
-          showProject={showProject} 
-          data={projectPkamasa}
-          title={projectPkamasa.projectTitle.en} 
-          image={projectPkamasa.projectKeyImage.en.fields.file.en.url}
-        />
-        <ProjectCard 
-          showProject={showProject} 
-          data={projectPtengine}
-          title={projectPtengine.projectTitle.en} 
-          // image={projectPtengine.projectKeyImage.en.fields.file.en.url}
-        />
-        <ProjectCard showProject={showProject} />
+      <Grid item xs={12} sm={3}>
+        <Grid container>
+          <Grid item xs={6} sm={12}>
+            <ProjectCard 
+              showProject={showProject} 
+              data={projectPkamasa}
+              title={projectPkamasa.projectTitle.en} 
+              // image={projectPkamasa.projectKeyImage.en.fields.file.en.url}
+            />
+          </Grid>
+          <Grid item xs={6} sm={12}>
+            <ProjectCard 
+              showProject={showProject} 
+              data={projectPtengine}
+              title={projectPtengine.projectTitle.en} 
+              // image={projectPtengine.projectKeyImage.en.fields.file.en.url}
+            />
+          </Grid>
+        </Grid>
       </Grid>
 
-      <Grid item xs={12} sm={9} md={8}>
+      <Grid item xs={12} sm={9}>
         <Typography variant="h1">
           {switchText(state.projectTitleEn, state.projectTitleJa)}
-          {/* data must be in the form of an array */}
-          <ContentfulToHTML dataEn={state.pageContentEn} dataJa={state.pageContentJa} />
         </Typography>
+        {/* data must be in the form of an array */}
+        <ContentfulToHTML dataEn={state.pageContentEn} dataJa={state.pageContentJa} />
       </Grid>
 
-    </Grid>
+      </Grid>
+
+    </div>
   )};
 
 export default ProjectSelector;

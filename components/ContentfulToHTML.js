@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+// documentToHtmlString doesn't return image embeds, so custom options are needed
 let optionsEn = {
   renderNode: {
     'embedded-asset-block': (node) =>

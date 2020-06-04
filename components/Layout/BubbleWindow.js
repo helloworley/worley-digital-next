@@ -14,7 +14,7 @@ const styles = theme => createStyles({
     '&:hover div': {
       boxShadow: '0 10px 16px 0 rgba(0, 0, 0, 0.25)',
       transition: '.5s'
-    }
+    },
   },
   image: {
     height: '120px',
