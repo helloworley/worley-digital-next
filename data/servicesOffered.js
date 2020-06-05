@@ -15,13 +15,8 @@ export default [
     image: ""
   },
   {
-    link: 'ux-design',
-    text: "uxDesign",
-    image: ""
-  },
-  {
-    link: 'ui-design',
-    text: "uiDesign",
+    link: 'ui-ux-design',
+    text: "uiuxDesign",
     image: ""
   },
   {

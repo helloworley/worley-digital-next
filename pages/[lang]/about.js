@@ -116,7 +116,7 @@ const useStyles = makeStyles(theme => ({
 
 const Index = props => {
   const classes = useStyles();
-  const { locale } = React.useContext(LocaleContext)
+  const { locale } = React.useContext(LocaleContext);
 
   return(
     <Layout
@@ -124,7 +124,6 @@ const Index = props => {
       toggleContactForm={props.toggleContactForm} 
       contactOpen={props.contactOpen}
     >
-      <>
       <div className={classes.wrapper}>
         <div className={classes.wrapperInner}>
           <Grid container className={classes.contentContainer} spacing={2}>
@@ -160,7 +159,6 @@ const Index = props => {
       <div className={classes.background}>
         <div className={classes.backgroundInner}></div>
       </div>
-      </>
     </Layout>
   )};
 
