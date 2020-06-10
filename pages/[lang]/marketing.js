@@ -19,6 +19,9 @@ import Hero from '../../components/Layout/Hero';
 import ServicesOffered from '../../components/Layout/ServicesOffered';
 import ServiceSelectTabBar from '../../components/Layout/ServiceSelectTabBar';
 import ProjectSelector from '../../components/Layout/ProjectSelector';
+import ContentfulToHTML from '../../components/ContentfulToHTML';
+import MktServicesOffered from '../../components/Marketing/MktServicesOffered';
+import CallToActionSection from '../../components/Layout/CallToActionSection';
 
 
 // data
@@ -74,9 +77,19 @@ const useStyles = makeStyles(theme => ({
   },
   centeredWrapper: {
     textAlign: 'center',
+    padding: '0 32px',
     [theme.breakpoints.up('md')]: {
-      textAlign: 'left'
+      textAlign: 'left',
+      padding: '0 32px',
     },
+    maxWidth: '800px',
+    margin: '80px auto',
+    '& img': {
+      margin: '40px 0'
+    },
+    '& p': {
+      textAlign: 'left',
+    }
   },
 }));
 
@@ -94,6 +107,8 @@ const Index = props => {
     return locale == 'en' ? textEn : textJa;
   }
 
+  console.log('page data', pageData)
+
   return(
     <Layout
       locale={locale}
@@ -109,8 +124,17 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
-      
-        <ProjectSelector />
+
+      <div className={classes.centeredWrapper}>
+        <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
+      </div>
+
+      <MktServicesOffered servicesOffered={pageData.servicesOffered.en} />
+
+      <CallToActionSection 
+        text={pageData.callToAction} 
+        toggleContactForm={props.toggleContactForm} 
+      />
         
     </Layout>
   )};

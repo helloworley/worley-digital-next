@@ -43,9 +43,6 @@ const useStyles = makeStyles(theme => ({
       maxWidth: '560px',
     },
   },
-  buttonWrap: {
-    textAlign: 'center',
-  },
   wrapper: {
     // backgroundImage: `url(${bgImage})`,
     flexGrow: 1,
@@ -80,6 +77,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       textAlign: 'left'
     },
+  },
+  buttonWrap: {
+    textAlign: 'center',
   },
   button: {
     fontStyle: 'normal',
