@@ -23,6 +23,19 @@ import ProjectSelector from '../../components/Layout/ProjectSelector';
 
 // data
 import pageData from '../../data/pageBranding.json';
+import projectPkamasa from '../../data/brandingExample-pkmasa.json';
+import projectPtengine from '../../data/brandingExample-ptengine.json';
+import projectMango from '../../data/brandingExample-mangofactory.json';
+import projectVtap from '../../data/brandingExample-vtap.json';
+
+const projects = [
+  projectPkamasa,
+  projectPtengine,
+  projectMango,
+  projectVtap
+]
+
+
 const bgImage = pageData.heroBackground.en.fields.file.en.url;
 const titleEn = pageData.pageTitle.en;
 const titleJa = pageData.pageTitle.ja;
@@ -69,8 +82,20 @@ const useStyles = makeStyles(theme => ({
     }
   },
   contentContainer: {
+    textAlign: 'center',
+    padding: '0 32px',
+    [theme.breakpoints.up('md')]: {
+      textAlign: 'left',
+      padding: '0 32px',
+    },
     maxWidth: '1260px',
-    margin: '0 auto',
+    margin: '80px auto',
+    '& img': {
+      margin: '40px 0'
+    },
+    '& p': {
+      textAlign: 'left',
+    }
   },
   centeredWrapper: {
     textAlign: 'center',
@@ -109,8 +134,12 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
+
+        <div className={classes.contentContainer}>
+          <ProjectSelector projects={projects} />
+        </div>
       
-        <ProjectSelector />
+        
         
     </Layout>
   )};

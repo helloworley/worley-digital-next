@@ -7,9 +7,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   image: {
     maxWidth: '100%',
+    marginBottom: '-5px',
   },
   masonryGrid: {
-    display: 'flex'
+    display: 'flex',
   }
 }));
  
@@ -19,13 +20,13 @@ const Index = props => {
   const childElements = props.elements.map(function(element, i){
     return (
         // <li key={i} lassName="image-element-class">
-            <img src={element.fields.file.en.url} className={classes.image }/>
+            <img key={i} src={element.fields.file.en.url} className={classes.image }/>
         // </li>
       );
     });
 
     const breakpointColumnsObj = {
-      default: 4,
+      // default: 4,
       1100: 3,
       700: 2,
       500: 1

@@ -71,7 +71,7 @@ const MktgService = props => {
 
   let icon;
   if (typeof fields.icon != 'undefined') {
-    icon = fields.icon.en.fields.file.en.url;
+    // icon = fields.icon.en.fields.file.en.url;
   }
 
   return(  

@@ -99,9 +99,13 @@ const ProjectSelectorWebsites = props => {
     });
   }
 
+  console.log('projects before map', props.projects)
+
   const switchText = ( textEn, textJa ) => {
     return locale == 'en' ? textEn : textJa;
   }
+
+  console.log('props', props)
 
   const projects = props.projects;
 
@@ -116,6 +120,7 @@ const ProjectSelectorWebsites = props => {
   }
 
   const projectOptions = projects.map( (project, i) => {
+    console.log('url', project.featureImage.en.fields.file.en.url)
     return <Grid item xs={6} sm={4} md={12} key={i}>
       <ProjectCard 
         showProject={showProject} 

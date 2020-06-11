@@ -25,9 +25,7 @@ import Gallery from '../../components/Layout/Gallery';
 import pageData from '../../data/pagePhotography.json';
 const bgImage = pageData.heroBackground.en.fields.file.en.url;
 const titleEn = pageData.title.en;
-// const titleEn = 'Photography';
 const titleJa = pageData.title.ja;
-// const titleJa = 'フォトグラフィ';
 const pageSubtitleEn = pageData.subtitle.en;
 const pageSubtitleJa = pageData.subtitle.ja;
 

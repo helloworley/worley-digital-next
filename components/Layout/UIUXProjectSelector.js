@@ -5,9 +5,6 @@ import React, { useEffect } from 'react'
 import { Button, Typography, Grid } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 
-// next
-import Link from 'next/link';
-
 // translation
 import { LocaleContext } from '../../context/LocaleContext';
 
@@ -56,7 +53,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const ProjectSelector = props => {
+const UIUXProjectSelector = props => {
   const classes = useStyles();
   const { locale } = React.useContext(LocaleContext);
   const projects = props.projects;
@@ -64,8 +61,6 @@ const ProjectSelector = props => {
   const [state, setState] = React.useState({
     selectedProject: 'PKMASA Branding',
   });
-
-  console.log('props', props)
 
   const showProject = data => {
     setState({ 
@@ -99,7 +94,7 @@ const ProjectSelector = props => {
       <ProjectCard 
         showProject={showProject} 
         data={project}
-        // title={project.link.en}
+        title={project.projectTitle.en}
         image={project.featureImage.en.fields.file.en.url}
         selected={checkSelectedProjectCard(project.projectTitle.en, state.projectTitleEn)}
       />
@@ -137,4 +132,4 @@ const ProjectSelector = props => {
     </div>
   )};
 
-export default ProjectSelector;
+export default UIUXProjectSelector;

@@ -16,9 +16,7 @@ import { LocaleContext } from '../../context/LocaleContext';
 // custom
 import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
-import ServicesOffered from '../../components/Layout/ServicesOffered';
-import ServiceSelectTabBar from '../../components/Layout/ServiceSelectTabBar';
-import ProjectSelector from '../../components/Layout/ProjectSelector';
+import UIUXProjectSelector from '../../components/Layout/UIUXProjectSelector';
 
 
 // data
@@ -28,6 +26,16 @@ const titleEn = pageData.pageTitle.en;
 const titleJa = pageData.pageTitle.ja;
 const pageSubtitleEn = pageData.pageSubtitle.en;
 const pageSubtitleJa = pageData.pageSubtitle.ja;
+
+import projectBudgeting from '../../data/uxUiProject-budgeting.json';
+import projectCunard from '../../data/uxUiProject-cunard.json';
+import projectRakuchat from '../../data/uxUiProject-rakuchat.json';
+
+const projects = [
+  projectBudgeting,
+  projectCunard,
+  projectRakuchat,
+]
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -69,8 +77,20 @@ const useStyles = makeStyles(theme => ({
     }
   },
   contentContainer: {
+    textAlign: 'center',
+    padding: '0 32px',
+    [theme.breakpoints.up('md')]: {
+      textAlign: 'left',
+      padding: '0 32px',
+    },
     maxWidth: '1260px',
-    margin: '0 auto',
+    margin: '80px auto',
+    '& img': {
+      margin: '40px 0'
+    },
+    '& p': {
+      textAlign: 'left',
+    }
   },
   centeredWrapper: {
     textAlign: 'center',
@@ -110,7 +130,9 @@ const Index = props => {
         bgImage={bgImage}
       />
       
-        <ProjectSelector />
+      <div className={classes.contentContainer}>
+        <UIUXProjectSelector projects={projects} />
+      </div>
         
     </Layout>
   )};

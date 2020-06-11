@@ -36,6 +36,8 @@ const projects = [
   projectS
 ]
 
+console.log('projects', projects)
+
 const bgImage = pageData.heroBackground.en.fields.file.en.url;
 const titleEn = pageData.pageTitle.en;
 const titleJa = pageData.pageTitle.ja;
@@ -212,7 +214,7 @@ const Index = props => {
         {/* view 2 */}
         <div value={value} index={1} dir={theme.direction}>
           <div className={classes.contentContainer}>
-            <WebsiteProjectSelector projects={projects} className={classes.test}/>
+            <WebsiteProjectSelector projects={projects} />
           </div>
         </div>
       </SwipeableViews>

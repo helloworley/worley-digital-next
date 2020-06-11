@@ -5,7 +5,6 @@ import { ServerStyleSheets } from '@material-ui/core/styles';
 const bodyStyles = {
   maxWidth: '100%',
   overflowX: 'hidden',
-  backgroundColor: '#fff',
 }
 
 export default class MyDocument extends Document {
