@@ -21,6 +21,10 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       fontSize: '2em',
     }
+  },
+  mktgServiceWrapper: {
+    maxWidth: '1200px',
+    margin: '0 auto',
   }
 }));
 
@@ -42,13 +46,15 @@ const MktServicesOffered = props => {
         Digital Marketing Services We Offer
       </Typography>
 
-      <Grid container>
-        {props.servicesOffered.map( (service, i) => {
-          return <Grid item key={i} xs={12} sm={12} md={4}>
-            <MktgService service={service} />
-          </Grid>
-        })}
+      <div className={classes.mktgServiceWrapper}>
+        <Grid container>
+          {props.servicesOffered.map( (service, i) => {
+            return <Grid item key={i} xs={12} sm={12} md={4}>
+              <MktgService service={service} />
+            </Grid>
+          })}
       </Grid>
+      </div>
     </div>
   )};
 

@@ -15,16 +15,11 @@ const useStyles = makeStyles(theme => ({
     margin: '0 0 64px',
     textAlign: 'center',
   },
-  mktgIcon: {
-    margin: '0 0 24px',
-    height: 'auto',
-    width: '120px'
-  },
   serviceSubList: {
     textAlign: 'center',
     margin: '0 0 32px',
     padding: '0',
-    listStyle: 'none'
+    listStyle: 'none',
   },
   Subtitle: {
     margin: '0 auto 24px',
@@ -33,7 +28,20 @@ const useStyles = makeStyles(theme => ({
   test: {
     width: '120px',
     height: '120px'
-  }
+  },
+  iconWrapper: {
+    width: '120px',
+    height: '120px',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  mktgIcon: {
+    margin: '0 0 24px',
+    height: 'auto',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
 }));
 
 
@@ -71,12 +79,15 @@ const MktgService = props => {
 
   let icon;
   if (typeof fields.icon != 'undefined') {
-    // icon = fields.icon.en.fields.file.en.url;
+    icon = fields.icon.en.fields.file.en.url;
   }
 
   return(  
     <div className={classes.MktgService}>
-      <img src={icon} className={classes.mktgIcon}/>
+      <div className={classes.iconWrapper}>
+        <img src={icon} className={classes.mktgIcon}/>
+      </div>
+     
       <Typography variant="h3" className={classes.Subtitle}>
         {switchText(fields.heading.en, fields.heading.ja)}
       </Typography>
