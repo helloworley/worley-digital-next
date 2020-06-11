@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   projectOptions: {
-    // marginBottom: '40px'/
+    marginBottom: '40px',
   },
 }));
 
@@ -110,7 +110,7 @@ const ProjectSelector = props => {
   return(  
     <div className={classes.contentContainer}>
 
-      <Grid className={classes.wrapper} container spacing={4}>
+      <Grid className={classes.wrapper} container>
 
         <Grid item xs={12} md={8} className={classes.colContent}>
           <Typography variant="h1">

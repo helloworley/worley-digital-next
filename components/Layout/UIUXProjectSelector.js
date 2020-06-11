@@ -17,8 +17,6 @@ const useStyles = makeStyles(theme => ({
     margin: '80px 0 120px',
   },
   contentContainer: {
-    // maxWidth: '95%',
-    // margin: '0 auto',
     [theme.breakpoints.up('sm')]: {
       padding: '0 40px',
     },
@@ -30,24 +28,24 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'left',
     },
   },
-  // colContent: {
-  //   order: 3,
-  //   [theme.breakpoints.up('md')]: {
-  //     order: 1,
-  //   },
-  // },
-  // colSpace: {
-  //   order: 2,
-  //   [theme.breakpoints.up('md')]: {
-  //     order: 2,
-  //   },
-  // },
-  // colOptions: {
-  //   order: 1,
-  //   [theme.breakpoints.up('md')]: {
-  //     order: 3,
-  //   },
-  // },
+  colContent: {
+    order: 3,
+    [theme.breakpoints.up('md')]: {
+      order: 1,
+    },
+  },
+  colSpace: {
+    order: 2,
+    [theme.breakpoints.up('md')]: {
+      order: 2,
+    },
+  },
+  colOptions: {
+    order: 1,
+    [theme.breakpoints.up('md')]: {
+      order: 3,
+    },
+  },
   projectOptions: {
     marginBottom: '80px'
   },
@@ -105,7 +103,7 @@ const UIUXProjectSelector = props => {
   return(  
     <div className={classes.contentContainer}>
 
-      <Grid className={classes.wrapper} container spacing={4}>
+      <Grid className={classes.wrapper} container>
 
         <Grid item xs={12} md={8} className={classes.colContent}>
           <Typography variant="h1">

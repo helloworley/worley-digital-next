@@ -19,8 +19,6 @@ const useStyles = makeStyles(theme => ({
     margin: '80px 0 120px',
   },
   contentContainer: {
-    // maxWidth: '95%',
-    // margin: '0 auto',
     [theme.breakpoints.up('sm')]: {
       padding: '0 40px',
     },
