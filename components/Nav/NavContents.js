@@ -1,16 +1,15 @@
 import Link from 'next/link';
-import { Typography } from '@material-ui/core';
+import { Typography, Divider, ListItem, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import navItems from '../../data/navItems';
+import navItemsMobile from '../../data/navItemsMobile';
 import navSocials from '../../data/navSocials';
 
-const menuItems = navItems;
-const socialItems = navSocials;
+const menuItems = navItemsMobile;
 
 
 const useStyles = makeStyles({
   navigation: {
-    padding: '32px',
+    padding: '64px 0',
   },
   socialLogos: {
     position: 'absolute',
@@ -46,80 +45,60 @@ const useStyles = makeStyles({
   logo: {
     color: 'text',
     cursor: 'pointer',
-    maxWidth: '80px',
+    maxWidth: '160px',
     margin: '0 0 4px',
   },
   a: {
     listStyle: 'none',
     padding: '6px 0',
     color: '#333',
+    textDecoration: 'none',
+  },
+  listItem: {
+    minWidth: '340px',
+    textAlign: 'center',
+  },
+  text: {
+    '& span': {
+      fontWeight: 'bold',
+    }
   }
 });
 
-const getSingleMenuItem = (menuItem, menuColor, locale) => {
-  const classes = useStyles();
-  return (
-    <Link href={`/${locale}${menuItem.link}`}>
-      <a className={classes.a} style={{color: menuColor}}>
-        {menuItem.name}
-      </a>
-    </Link>
-  )
-}
-
-const getMenuChildren = (name, menuChildren, menuColor) => {
-  const classes = useStyles();
-  return (
-    <span>
-      <Text
-        sx={{
-          color: '#bababa'
-        }}
-      >
-        {name}
-      </Text>
-      <ul>
-        {menuChildren.map(childItem => (
-          <li key={childItem.name} className={classes.listItem}>
-            <Link href={childItem.link}>
-              <a className={classes.a} style={{color: menuColor}}>
-                {childItem.name}
-              </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </span>
-  )
-}
-
-function socialLogo(color, lightLogo, darkLogo) {
-  if (color == '#fff') {
-    return lightLogo;
-  }
-  return darkLogo;
-}
 
 const NavContents = props => {
   const classes = useStyles();
+  const locale = props.locale;
+
+  const menuItemList = menuItems => {
+    return <ul className={classes.list}>
+      {menuItems.map(menuItem => (
+        <li key={menuItem.text} className={classes.listItem}>
+          <Divider />
+          <Link href={`/${locale}/${menuItem.link}`}>
+            <a className={classes.a}>
+              <ListItem button className={classes.listItem}>
+                  <ListItemText primary={menuItem.text} className={classes.text}/>
+              </ListItem>
+            </a>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  }
+  
   return (
     <div className={classes.navigation} id="navigation">
       <Link href="/">
         <div className={classes.logoContainer}>
-          <img className={classes.logo} />
           <Link href="/">
-            <Typography style={{color: props.menuColor}}> Joshua Worley</Typography>
+            <img className={classes.logo} src="/worley-digital-logo-dark.png" id="logo"  />
           </Link>
         </div>
       </Link>
-      <ul className={classes.list}>
-        {menuItems.map(menuItem => (
-          <li key={menuItem.name} className={classes.listItem}>
-            {menuItem.children ? getMenuChildren(menuItem.name, menuItem.children, props.menuColor) : getSingleMenuItem(menuItem, props.menuColor, props.locale)}
-          </li>
-        ))}
-      </ul>
-      <div className={classes.socialLogos}>
+      {menuItemList(menuItems)}
+      <Divider />
+      {/* <div className={classes.socialLogos}>
           <ul className={classes.socialsList}>
             {socialItems.map(socialItem => (
               <li className={classes.socialsListItem} key={socialItem.logoDark}>
@@ -129,7 +108,7 @@ const NavContents = props => {
               </li>  
             ))}
           </ul>
-      </div>
+      </div> */}
     </div>
 
   )

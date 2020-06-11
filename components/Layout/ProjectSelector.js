@@ -33,26 +33,26 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'left',
     },
   },
-  // colContent: {
-  //   order: 3,
-  //   [theme.breakpoints.up('md')]: {
-  //     order: 1,
-  //   },
-  // },
-  // colSpace: {
-  //   order: 2,
-  //   [theme.breakpoints.up('md')]: {
-  //     order: 2,
-  //   },
-  // },
-  // colOptions: {
-  //   order: 1,
-  //   [theme.breakpoints.up('md')]: {
-  //     order: 3,
-  //   },
-  // },
+  colContent: {
+    order: 3,
+    [theme.breakpoints.up('md')]: {
+      order: 1,
+    },
+  },
+  colSpace: {
+    order: 2,
+    [theme.breakpoints.up('md')]: {
+      order: 2,
+    },
+  },
+  colOptions: {
+    order: 1,
+    [theme.breakpoints.up('md')]: {
+      order: 3,
+    },
+  },
   projectOptions: {
-    marginBottom: '80px'
+    // marginBottom: '40px'/
   },
 }));
 
