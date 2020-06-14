@@ -137,6 +137,8 @@ const Index = props => {
       locale={locale}
       toggleContactForm={props.toggleContactForm} 
       contactOpen={props.contactOpen}
+      toggleServicesHovered={props.toggleServicesHovered}
+      servicesHovered={props.servicesHovered}
     >
       <div className={classes.wrapper}>
         <div className={classes.wrapperInner}>
