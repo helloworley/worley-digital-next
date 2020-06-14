@@ -16,9 +16,6 @@ import { LocaleContext } from '../../context/LocaleContext';
 // custom
 import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
-import ServicesOffered from '../../components/Layout/ServicesOffered';
-import ServiceSelectTabBar from '../../components/Layout/ServiceSelectTabBar';
-import ProjectSelector from '../../components/Layout/ProjectSelector';
 import ContentfulToHTML from '../../components/ContentfulToHTML';
 import MktServicesOffered from '../../components/Marketing/MktServicesOffered';
 import CallToActionSection from '../../components/Layout/CallToActionSection';
@@ -85,12 +82,26 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '800px',
     margin: '80px auto',
     '& img': {
-      margin: '40px 0'
+      margin: '56px 0 24px'
     },
-    '& p': {
-      textAlign: 'left',
-    }
   },
+  pageContent: {
+    '& p': {
+      lineHeight: '1.8'
+    },
+    // text styles
+    '& li': {
+      '& p': {
+        margin: '0'
+      }
+    },
+    '& h2': {
+      margin: '56px 0 16px'
+    },
+    '& h3': {
+      margin: '40px 0 16px'
+    }
+  }
 }));
 
 
@@ -125,11 +136,16 @@ const Index = props => {
         bgImage={bgImage}
       />
 
-      <div className={classes.centeredWrapper}>
-        <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
+      <div className={classes.pageContent}>
+
+        <div className={classes.centeredWrapper}>
+          <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
+        </div>
+
       </div>
 
       <MktServicesOffered servicesOffered={pageData.servicesOffered.en} />
+        
 
       <CallToActionSection 
         text={pageData.callToAction} 

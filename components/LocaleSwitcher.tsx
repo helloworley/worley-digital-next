@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     marginRight: '0',
     marginLeft: '8px',
     '& .MuiRadio-root + span': {
-      color: 'rgba(255,255,255,.3)',
+      color: 'rgba(255,255,255,.7)',
     },
     '& .Mui-checked + span': {
       fontWeight: '900',

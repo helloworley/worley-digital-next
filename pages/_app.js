@@ -1,9 +1,9 @@
 import React from 'react';
 import App from 'next/app';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Head from 'next/head';
-import { withStyles } from '@material-ui/styles';
+
 
 
 const theme = createMuiTheme({
@@ -12,13 +12,6 @@ const theme = createMuiTheme({
         main: "#595959",
         lightText: "#efefef",
       },
-      sedona: {
-        darkgray: "#424242",
-        darkestgray: "#212121",
-        lightgray: "#8E8E93",
-        beige: "#C8BFB9",
-        white: "#fff",
-      }
     },
     typography: {
       fontFamily: [
@@ -33,6 +26,11 @@ const theme = createMuiTheme({
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
       ].join(','),
+      listItem: {
+        '& p': {
+          margin: '0'
+        }
+      },
       h1: {
         fontWeight: "900",
         fontSize: '2em',
@@ -50,7 +48,7 @@ const theme = createMuiTheme({
         fontWeight: "700",
         fontSize: "17px",
         lineHeight: "1.3",
-        margin: "0 0 40px",
+        margin: "24px 0 40px",
         textAlign: "center",
         color: "#616161",
       },
@@ -58,7 +56,7 @@ const theme = createMuiTheme({
         fontSize: "17px",
         lineHeight: "1.3",
         fontWeight: 500,
-        margin: "0 0 40px",
+        margin: "24px 0 40px",
         textAlign: "center",
         color: "#616161",
       },
@@ -115,17 +113,17 @@ class MyApp extends App {
       <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <title>Worley Digital</title>
       </Head>
         <CssBaseline />
         <div>
-          <MuiThemeProvider theme={theme}>
+          <ThemeProvider theme={theme}>
             <Component {...pageProps} {...this.state} 
               toggleContactForm={this.toggleContactForm} 
               toggleServicesHovered={this.toggleServicesHovered} 
             />
-          </MuiThemeProvider>
+          </ThemeProvider>
         </div>
       </>
     );

@@ -18,6 +18,7 @@ import Hero from '../../components/Layout/Hero';
 import ContentfulToHTML from '../../components/ContentfulToHTML';
 import CallToActionSection from '../../components/Layout/CallToActionSection';
 import WebsiteProjectSelector from '../../components/Layout/WebsiteProjectSelector';
+import PastProjectsHeading from '../../components/Layout/PastProjectsHeading';
 
 
 // data
@@ -115,6 +116,27 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'left',
     }
   },
+  pageContent: {
+    '& img': {
+      margin: '56px 0 24px'
+    },
+    '& p': {
+      textAlign: 'left',
+      lineHeight: '1.8'
+    },
+    // text styles
+    '& li': {
+      '& p': {
+        margin: '0'
+      }
+    },
+    '& h2': {
+      margin: '56px 0 16px'
+    },
+    '& h3': {
+      margin: '40px 0 16px'
+    }
+  }
 }));
 
 function TabPanel(props) {
@@ -187,37 +209,19 @@ const Index = props => {
         bgImage={bgImage}
       />
 
-      <Paper className={classes.root}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          centered
-        >
-          <Tab label={switchText('Overview', 'サービス概要')} {...a11yProps(0)} />
-          <Tab label={switchText('Example Projects', 'プロジェクトの例')} {...a11yProps(1)} />
-        </Tabs>
-      </Paper>
-
-      <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        {/* view 1 */}
-        <div value={value} index={0} dir={theme.direction}>
-          <div className={classes.centeredWrapper}>
-            <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
-          </div>
+      <div className={classes.pageContent}> 
+        
+        <div className={classes.centeredWrapper}>
+          <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
         </div>
-        {/* view 2 */}
-        <div value={value} index={1} dir={theme.direction}>
-          <div className={classes.contentContainer}>
-            <WebsiteProjectSelector projects={projects} />
-          </div>
+      
+        <div className={classes.contentContainer}>
+          <PastProjectsHeading />
+          <WebsiteProjectSelector projects={projects} />
         </div>
-      </SwipeableViews>
+        
+      </div>
+    
 
       <CallToActionSection 
         text={pageData.callToAction} 

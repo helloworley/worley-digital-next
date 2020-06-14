@@ -76,6 +76,27 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'left'
     },
   },
+  pageContent: {
+    '& img': {
+      margin: '56px 0 24px'
+    },
+    '& p': {
+      textAlign: 'left',
+      lineHeight: '1.8'
+    },
+    // text styles
+    '& li': {
+      '& p': {
+        margin: '0'
+      }
+    },
+    '& h2': {
+      margin: '56px 0 16px'
+    },
+    '& h3': {
+      margin: '40px 0 16px'
+    }
+  }
 }));
 
 
@@ -85,6 +106,8 @@ const Index = props => {
   const { locale } = React.useContext(LocaleContext);
 
   const buttonText = 'homeFeatureButtonText';
+
+  console.log('page data', pageData)
 
   const switchText = ( textEn, textJa ) => {
     return locale == 'en' ? textEn : textJa;
@@ -107,10 +130,14 @@ const Index = props => {
         bgImage={bgImage}
       />
       <ServicesOffered
-        title={t('homeServicesTitle')}
+        title={switchText(pageData.servicesOfferedTitle.en, pageData.servicesOfferedTitle.ja)}
+        subtitle={switchText(pageData.servicesOfferedSubtitle.en, pageData.servicesOfferedSubtitle.ja)}
         servicesOffered={servicesOffered}
         locale={locale}
       />
+      <div className={classes.pageContent}>
+
+      </div>
     </Layout>
   )};
 

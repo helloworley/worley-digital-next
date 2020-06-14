@@ -42,6 +42,9 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
   },
   sectionTitle: {
+    margin: '0 0 16px',
+  },
+  sectionSubtitle: {
     margin: '0 0 64px',
   },
   bubbleWindowWrapper: {
@@ -68,6 +71,9 @@ const ServicesOffered = props => {
           <div className={`${classes.section} ${classes.bubbleWindowsSection}`}>
             <Typography variant="h2" className={classes.sectionTitle}>
               {props.title}
+            </Typography>
+            <Typography className={classes.sectionSubtitle}>
+              {props.subtitle}
             </Typography>
             <Grid container spacing={3}>
               {

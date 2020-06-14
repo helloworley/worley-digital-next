@@ -5,9 +5,6 @@ import React, { useEffect } from 'react'
 import { Button, Typography, Grid } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 
-// next
-import Link from 'next/link';
-
 // translation
 import { LocaleContext } from '../../context/LocaleContext';
 
@@ -54,6 +51,10 @@ const useStyles = makeStyles(theme => ({
   projectOptions: {
     marginBottom: '40px',
   },
+  selectHeading: {
+    textAlign: 'center',
+    margin: '0 auto 16px',
+  }
 }));
 
 const ProjectSelector = props => {
@@ -105,7 +106,7 @@ const ProjectSelector = props => {
       />
     </Grid>
   });
-  
+
 
   return(  
     <div className={classes.contentContainer}>
@@ -128,6 +129,7 @@ const ProjectSelector = props => {
 
         <Grid item xs={12} md={3} className={classes.colOptions}>
           <Grid spacing={3} container className={classes.projectOptions}>
+            <h3 className={classes.selectHeading}>{switchText('Select a Project', 'プロジェクトを選んでください')}</h3>
             {projectOptions}
           </Grid>
         </Grid>

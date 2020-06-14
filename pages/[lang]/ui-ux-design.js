@@ -16,7 +16,9 @@ import { LocaleContext } from '../../context/LocaleContext';
 // custom
 import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
+import ContentfulToHTML from '../../components/ContentfulToHTML';
 import UIUXProjectSelector from '../../components/Layout/UIUXProjectSelector';
+import PastProjectsHeading from '../../components/Layout/PastProjectsHeading';
 
 
 // data
@@ -93,11 +95,36 @@ const useStyles = makeStyles(theme => ({
     }
   },
   centeredWrapper: {
-    textAlign: 'center',
+    // textAlign: 'center',
+    padding: '0 32px',
     [theme.breakpoints.up('md')]: {
-      textAlign: 'left'
+      textAlign: 'left',
+      padding: '0 32px',
     },
+    maxWidth: '800px',
+    margin: '80px auto',
   },
+  pageContent: {
+    '& img': {
+      margin: '56px 0 24px'
+    },
+    '& p': {
+      textAlign: 'left',
+      lineHeight: '1.8'
+    },
+    // text styles
+    '& li': {
+      '& p': {
+        margin: '0'
+      }
+    },
+    '& h2': {
+      margin: '56px 0 16px'
+    },
+    '& h3': {
+      margin: '40px 0 16px'
+    }
+  }
 }));
 
 
@@ -129,9 +156,18 @@ const Index = props => {
         toggleContactForm={props.toggleContactForm} 
         bgImage={bgImage}
       />
+
+      <div className={classes.pageContent}>
+
+        <div className={classes.centeredWrapper}>
+          <ContentfulToHTML dataEn={pageData.content.en.content} dataJa={pageData.content.ja.content}/>
+        </div>
       
-      <div className={classes.contentContainer}>
-        <UIUXProjectSelector projects={projects} />
+        <div className={classes.contentContainer}>
+          <PastProjectsHeading />
+          <UIUXProjectSelector projects={projects} />
+        </div>
+
       </div>
         
     </Layout>

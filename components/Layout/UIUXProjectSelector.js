@@ -49,6 +49,10 @@ const useStyles = makeStyles(theme => ({
   projectOptions: {
     marginBottom: '80px'
   },
+  selectHeading: {
+    textAlign: 'center',
+    margin: '0 auto 16px',
+  }
 }));
 
 const UIUXProjectSelector = props => {
@@ -121,6 +125,7 @@ const UIUXProjectSelector = props => {
 
         <Grid item xs={12} md={3} className={classes.colOptions}>
           <Grid spacing={3} container className={classes.projectOptions}>
+            <h3 className={classes.selectHeading}>{switchText('Select a Project', 'プロジェクトを選んでください')}</h3>
             {projectOptions}
           </Grid>
         </Grid>

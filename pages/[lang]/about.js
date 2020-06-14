@@ -82,12 +82,14 @@ const useStyles = makeStyles(theme => ({
       backgroundSize: 'cover',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '160px 0',
+      padding: '100px 0',
     }
   },
   contentContainer: {
     maxWidth: '1260px',
-    margin: '0 auto',
+    [theme.breakpoints.up('md')]: {
+      margin: '0 auto',
+    },
   },
   centeredWrapper: {
     textAlign: 'center',
@@ -96,7 +98,6 @@ const useStyles = makeStyles(theme => ({
     },
   },
   background: {
-    backgroundImage: `url(${bgImage})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     width: '100%',
@@ -111,12 +112,25 @@ const useStyles = makeStyles(theme => ({
     height: '100vh',
     position: 'fixed',
     top: '0',
-  }
+  },
+  image: {
+    maxWidth: '100%',
+    // margin: '24px 0 0',
+    [theme.breakpoints.up('md')]: {
+      margin: '0',
+    },
+  },
 }));
 
 const Index = props => {
   const classes = useStyles();
   const { locale } = React.useContext(LocaleContext);
+
+  console.log('data', data);
+
+  const backgroundImage = {
+    backgroundImage: `url(${data.heroBackground.en.fields.file.en.url})`,
+  };
 
   return(
     <Layout
@@ -136,16 +150,14 @@ const Index = props => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container className={classes.contentContainer} spacing={2}>
-            <Grid item xs={12} md={6}>
+          <Grid container className={classes.contentContainer} spacing={6}>
+            <Grid item xs={12} md={8}>
               <Typography variant="h2" className={`${classes.text} ${classes.h2}`} >
                 {data.paragraph1Title[locale]}
               </Typography>
               <Typography variant="body1" className={classes.text}>
                 {data.paragraph1[locale].content[0].content[0].value}
               </Typography>
-            </Grid>
-            <Grid item xs={12} md={6}>
               <Typography variant="h2" className={`${classes.text} ${classes.h2}`} >
                 {data.paragraph2Title[locale]}
               </Typography>
@@ -153,10 +165,13 @@ const Index = props => {
                 {data.paragraph2[locale].content[0].content[0].value}
               </Typography>
             </Grid>
+            <Grid item xs={12} md={4}>
+              <img className={classes.image} src={data.image.en.fields.file.en.url} alt={data.image.en.fields.title.en}/>
+            </Grid>
           </Grid>
         </div>
       </div>
-      <div className={classes.background}>
+      <div className={classes.background} style={backgroundImage}>
         <div className={classes.backgroundInner}></div>
       </div>
     </Layout>
