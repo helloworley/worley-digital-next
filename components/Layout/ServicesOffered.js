@@ -19,16 +19,14 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     width: '100%',
     backgroundRepeat: 'no-repeat',
-    padding: '0 24px',
-    margin: '80px 0 120px',
+    padding: '80px 24px 96px',
+    backgroundColor: '#F5EBEB',
     [theme.breakpoints.up('sm')]: {
-      padding: '0 40px',
     },
     [theme.breakpoints.up('md')]: {
       backgroundSize: 'cover',
     },
     [theme.breakpoints.up('lg')]: {
-      padding: '0',
     }
   },
   contentContainer: {

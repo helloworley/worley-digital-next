@@ -14,7 +14,10 @@ import { LocaleContext } from '../../context/LocaleContext';
 // custom
 import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
+import HalfWidthSnapshotRight from '../../components/Layout/HalfWidthSnapshotRight';
+import HalfWidthSnapshotLeft from '../../components/Layout/HalfWidthSnapshotLeft';
 import ServicesOffered from '../../components/Layout/ServicesOffered';
+import SectionImageLeftTextRight from '../../components/Layout/SectionImageLeftTextRight';
 
 
 // data
@@ -113,6 +116,35 @@ const Index = props => {
     return locale == 'en' ? textEn : textJa;
   }
 
+  const isOdd = num => {
+    return num % 2;
+  }
+
+
+  const serviceSnapshots = pageData.serviceSnippets.en.map((serviceSnippet, i) => {
+    if (isOdd(i)) {
+      return <HalfWidthSnapshotRight
+        key={i}
+        title={switchText(serviceSnippet.fields.title.en, serviceSnippet.fields.title.ja)}
+        subtitle={switchText(serviceSnippet.fields.subtitle.en, serviceSnippet.fields.subtitle.ja)}
+        description={switchText(serviceSnippet.fields.description.en, serviceSnippet.fields.description.ja)}
+        bgImage={serviceSnippet.fields.background.en.fields.file.en.url}
+        buttonText={switchText(serviceSnippet.fields.buttonText.en, serviceSnippet.fields.buttonText.ja)}
+        link={serviceSnippet.fields.link.en}
+      />
+    } else {
+      return <HalfWidthSnapshotLeft
+        key={i}
+        title={switchText(serviceSnippet.fields.title.en, serviceSnippet.fields.title.ja)}
+        subtitle={switchText(serviceSnippet.fields.subtitle.en, serviceSnippet.fields.subtitle.ja)}
+        description={switchText(serviceSnippet.fields.description.en, serviceSnippet.fields.description.ja)}
+        bgImage={serviceSnippet.fields.background.en.fields.file.en.url}
+        buttonText={switchText(serviceSnippet.fields.buttonText.en, serviceSnippet.fields.buttonText.ja)}
+        link={serviceSnippet.fields.link.en}
+      />
+    }
+  });
+
 
   return(
     <Layout
@@ -135,6 +167,20 @@ const Index = props => {
         servicesOffered={servicesOffered}
         locale={locale}
       />
+
+      <div className={classes.contentContainer}>
+        <SectionImageLeftTextRight 
+          image={pageData.quickAbout.en.fields.image.en.fields.file.en.url}
+          title={switchText(pageData.quickAbout.en.fields.title.en, pageData.quickAbout.en.fields.title.ja)}
+          dataEn={pageData.quickAbout.en.fields.description.en.content}
+          dataJa={pageData.quickAbout.en.fields.description.ja.content}
+          buttonText={switchText(pageData.quickAbout.en.fields.buttonText.en, pageData.quickAbout.en.fields.buttonText.ja)}
+          link={pageData.quickAbout.en.fields.link.en}
+        />
+      </div>
+
+      {serviceSnapshots}
+
       <div className={classes.pageContent}>
 
       </div>
