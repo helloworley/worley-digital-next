@@ -12,6 +12,14 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 // styles 
 const useStyles = makeStyles(theme => ({
   ContentfulToHTML: {
+    '& p': {
+      color: '#616161',
+      fontFamily: 'Lato,"Helvetica Neue",Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+      fontWeight: '500',
+      lineHeight: '1.8',
+      margin: '0 0 32px',
+      fontSize: '1em',
+    }
   },
 }));
 
