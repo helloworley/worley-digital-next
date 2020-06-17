@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-const PastProjectsHeading = props => {
+const SectionHeading = props => {
   const classes = useStyles();
   const { locale } = React.useContext(LocaleContext);
 
@@ -30,8 +30,8 @@ const PastProjectsHeading = props => {
 
   return(  
     <div className={classes.projectsTitle}>
-      <h1 className={classes.heading}>{switchText( 'Past Projects', '過去のプロジェクト' )}</h1>
+      <h1 className={classes.heading}>{switchText( props.titleEn, props.titleJa )}</h1>
     </div>
   )};
 
-export default PastProjectsHeading;
+export default SectionHeading;

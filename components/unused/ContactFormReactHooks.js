@@ -82,12 +82,12 @@ const ContactForm = props => {
 // handle changes
 const handleChangeCheckbox = (event) => {
   setState({ ...state, [event.target.name]: event.target.checked });
-  console.log('new state', state)
+  // console.log('new state', state)
 };
 
 const handleChangeInput = prop => (event) => {
   setState({ ...state, [prop]: event.target.value});
-  console.log('new state', state)
+  // console.log('new state', state)
 };
 
 // create variables
@@ -102,8 +102,8 @@ const { t } = useTranslation();
 const getData = () => {
   // console.log('branding', branding)
   // console.log('state.branding', state.branding)
-  console.log('branding value', document.getElementById('branding').checked)
-  console.log('name value', document.getElementById('name').value)
+  // console.log('branding value', document.getElementById('branding').checked)
+  // console.log('name value', document.getElementById('name').value)
   const formData = {
     branding: document.getElementById('branding').value,
     photography: state.photography,
@@ -118,9 +118,9 @@ const getData = () => {
     company: state.company,
     inquiry: state.inquiry,
   }
-  console.log('getting data')
-  console.log('state', state)
-  console.log('form data', formData);
+  // console.log('getting data')
+  // console.log('state', state)
+  // console.log('form data', formData);
   return formData;
 }
 
@@ -141,12 +141,12 @@ const waitForForm = form => {
 }
 
 const addSubmitListener = theForm => {
-  console.log('add listener');
+  // console.log('add listener');
 
   theForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = getData();
-    console.log('form data', formData);
+    // console.log('form data', formData);
     let submitStatus = 'PENDING';
     fetch(`https://usebasin.com/f/b3b2da236c0c.json`, {
       method: 'POST',

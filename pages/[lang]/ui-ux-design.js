@@ -18,7 +18,8 @@ import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
 import ContentfulToHTML from '../../components/ContentfulToHTML';
 import UIUXProjectSelector from '../../components/Layout/UIUXProjectSelector';
-import PastProjectsHeading from '../../components/Layout/PastProjectsHeading';
+import SectionHeading from '../../components/Layout/SectionHeading';
+import SEO from '../../components/SEO.js';
 
 
 // data
@@ -142,35 +143,45 @@ const Index = props => {
   }
 
   return(
-    <Layout
-      locale={locale}
-      toggleContactForm={props.toggleContactForm} 
-      toggleServicesHovered={props.toggleServicesHovered}
-      servicesHovered={props.servicesHovered}
-      contactOpen={props.contactOpen}
-    >
-      <Hero 
-        title={ switchText( titleEn, titleJa ) }
-        subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
-        buttonText={buttonText}
-        toggleContactForm={props.toggleContactForm} 
-        bgImage={bgImage}
+    <>
+      <SEO
+        titleEn={pageData.seo.en.fields.title.en}
+        titleJa={pageData.seo.en.fields.title.ja}
+        descriptionEn={pageData.seo.en.fields.description.en}
+        descriptionJa={pageData.seo.en.fields.description.ja}
+        slug={pageData.seo.en.fields.slug ? pageData.seo.en.fields.slug.en : ''}
+        image={pageData.seo.en.fields.image.en.fields.file.en.url}
       />
+      <Layout
+        locale={locale}
+        toggleContactForm={props.toggleContactForm} 
+        toggleServicesHovered={props.toggleServicesHovered}
+        servicesHovered={props.servicesHovered}
+        contactOpen={props.contactOpen}
+      >
+        <Hero 
+          title={ switchText( titleEn, titleJa ) }
+          subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
+          buttonText={buttonText}
+          toggleContactForm={props.toggleContactForm} 
+          bgImage={bgImage}
+        />
 
-      <div className={classes.pageContent}>
+        <div className={classes.pageContent}>
 
-        <div className={classes.centeredWrapper}>
-          <ContentfulToHTML dataEn={pageData.content.en.content} dataJa={pageData.content.ja.content}/>
-        </div>
-      
-        <div className={classes.contentContainer}>
-          <PastProjectsHeading />
-          <UIUXProjectSelector projects={projects} />
-        </div>
-
-      </div>
+          <div className={classes.centeredWrapper}>
+            <ContentfulToHTML dataEn={pageData.content.en.content} dataJa={pageData.content.ja.content}/>
+          </div>
         
-    </Layout>
+          <div className={classes.contentContainer}>
+            <SectionHeading titleEn="Past UI UX Projects" titleJa="過去のUI UXプロジェクト" />
+            <UIUXProjectSelector projects={projects} />
+          </div>
+
+        </div>
+          
+      </Layout>
+    </>
   )};
 
 

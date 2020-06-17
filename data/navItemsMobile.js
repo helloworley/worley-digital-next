@@ -9,11 +9,6 @@ export default [
     image: ""
   },
   {
-    link: 'photography',
-    text: "Photography",
-    image: ""
-  },
-  {
     link: 'marketing',
     text: "Marketing",
     image: ""
@@ -26,6 +21,11 @@ export default [
   {
     link: 'website-creation',
     text: "Wesbite Creation",
+    image: ""
+  },
+  {
+    link: 'photography',
+    text: "Photography",
     image: ""
   },
 ]

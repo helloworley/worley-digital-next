@@ -1,5 +1,6 @@
 // react
-import React from 'react'
+import React from 'react';
+
 
 // material ui
 import { Grid, Button, Typography } from '@material-ui/core/';
@@ -18,6 +19,7 @@ import HalfWidthSnapshotRight from '../../components/Layout/HalfWidthSnapshotRig
 import HalfWidthSnapshotLeft from '../../components/Layout/HalfWidthSnapshotLeft';
 import ServicesOffered from '../../components/Layout/ServicesOffered';
 import SectionImageLeftTextRight from '../../components/Layout/SectionImageLeftTextRight';
+import SEO from '../../components/SEO.js';
 
 
 // data
@@ -110,7 +112,7 @@ const Index = props => {
 
   const buttonText = 'homeFeatureButtonText';
 
-  console.log('page data', pageData)
+  // console.log('page data', pageData)
 
   const switchText = ( textEn, textJa ) => {
     return locale == 'en' ? textEn : textJa;
@@ -147,6 +149,15 @@ const Index = props => {
 
 
   return(
+    <>
+    <SEO
+      titleEn={pageData.seo.en.fields.title.en}
+      titleJa={pageData.seo.en.fields.title.ja}
+      descriptionEn={pageData.seo.en.fields.description.en}
+      descriptionJa={pageData.seo.en.fields.description.ja}
+      slug={pageData.seo.en.fields.slug ? pageData.seo.en.fields.slug.en : ''}
+      image={pageData.seo.en.fields.image.en.fields.file.en.url}
+    />
     <Layout
       locale={locale}
       toggleContactForm={props.toggleContactForm} 
@@ -185,6 +196,7 @@ const Index = props => {
 
       </div>
     </Layout>
+    </>
   )};
 
 

@@ -38,7 +38,7 @@ const MktServicesOffered = props => {
     return locale == 'en' ? textEn : textJa;
   }
 
-  console.log('services offered', props.servicesOffered)
+  // console.log('services offered', props.servicesOffered)
 
   return(  
     <div className={classes.projectCard}>

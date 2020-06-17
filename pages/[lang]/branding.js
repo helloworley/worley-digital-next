@@ -18,7 +18,8 @@ import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
 import ContentfulToHTML from '../../components/ContentfulToHTML';
 import ProjectSelector from '../../components/Layout/ProjectSelector';
-import PastProjectsHeading from '../../components/Layout/PastProjectsHeading';
+import SectionHeading from '../../components/Layout/SectionHeading';
+import SEO from '../../components/SEO.js';
 
 
 // data
@@ -150,40 +151,43 @@ const Index = props => {
     return locale == 'en' ? textEn : textJa;
   }
 
-  console.log('page data', pageData);
+  // console.log('page data', pageData);
 
   return(
-    <Layout
-      locale={locale}
-      toggleContactForm={props.toggleContactForm} 
-      toggleServicesHovered={props.toggleServicesHovered}
-      servicesHovered={props.servicesHovered}
-      contactOpen={props.contactOpen}
-    >
-      <Hero 
-        title={ switchText( titleEn, titleJa ) }
-        subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
-        buttonText={buttonText}
-        toggleContactForm={props.toggleContactForm} 
-        bgImage={bgImage}
+    <>
+      <SEO
+        titleEn={pageData.seo.en.fields.title.en}
+        titleJa={pageData.seo.en.fields.title.ja}
+        descriptionEn={pageData.seo.en.fields.description.en}
+        descriptionJa={pageData.seo.en.fields.description.ja}
+        slug={pageData.seo.en.fields.slug ? pageData.seo.en.fields.slug.en : ''}
+        image={pageData.seo.en.fields.image.en.fields.file.en.url}
       />
-
-      <div className={classes.pageContent}>
-
-        <div className={classes.centeredWrapper}>
-          <ContentfulToHTML dataEn={pageData.content.en.content} dataJa={pageData.content.ja.content}/>
+      <Layout
+        locale={locale}
+        toggleContactForm={props.toggleContactForm} 
+        toggleServicesHovered={props.toggleServicesHovered}
+        servicesHovered={props.servicesHovered}
+        contactOpen={props.contactOpen}
+      >
+        <Hero 
+          title={ switchText( titleEn, titleJa ) }
+          subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
+          buttonText={buttonText}
+          toggleContactForm={props.toggleContactForm} 
+          bgImage={bgImage}
+        />
+        <div className={classes.pageContent}>
+          <div className={classes.centeredWrapper}>
+            <ContentfulToHTML dataEn={pageData.content.en.content} dataJa={pageData.content.ja.content}/>
+          </div>
+          <div className={classes.contentContainer}>
+            <SectionHeading titleEn="Past Branding Projects" titleJa="過去のブランディングプロジェクト" />
+            <ProjectSelector projects={projects} />
+          </div>
         </div>
-
-        <div className={classes.contentContainer}>
-          <PastProjectsHeading />
-          <ProjectSelector projects={projects} />
-        </div>
-
-      </div>
-      
-        
-        
-    </Layout>
+      </Layout>
+    </>
   )};
 
 

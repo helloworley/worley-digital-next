@@ -19,6 +19,7 @@ import Hero from '../../components/Layout/Hero';
 import ContentfulToHTML from '../../components/ContentfulToHTML';
 import MktServicesOffered from '../../components/Marketing/MktServicesOffered';
 import CallToActionSection from '../../components/Layout/CallToActionSection';
+import SEO from '../../components/SEO.js';
 
 
 // data
@@ -118,41 +119,51 @@ const Index = props => {
     return locale == 'en' ? textEn : textJa;
   }
 
-  console.log('page data', pageData)
+  // console.log('page data', pageData)
 
   return(
-    <Layout
-      locale={locale}
-      toggleContactForm={props.toggleContactForm} 
-      toggleServicesHovered={props.toggleServicesHovered}
-      servicesHovered={props.servicesHovered}
-      contactOpen={props.contactOpen}
-    >
-      <Hero 
-        title={ switchText( titleEn, titleJa ) }
-        subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
-        buttonText={buttonText}
-        toggleContactForm={props.toggleContactForm} 
-        bgImage={bgImage}
+    <>
+      <SEO
+        titleEn={pageData.seo.en.fields.title.en}
+        titleJa={pageData.seo.en.fields.title.ja}
+        descriptionEn={pageData.seo.en.fields.description.en}
+        descriptionJa={pageData.seo.en.fields.description.ja}
+        slug={pageData.seo.en.fields.slug ? pageData.seo.en.fields.slug.en : ''}
+        image={pageData.seo.en.fields.image.en.fields.file.en.url}
       />
+      <Layout
+        locale={locale}
+        toggleContactForm={props.toggleContactForm} 
+        toggleServicesHovered={props.toggleServicesHovered}
+        servicesHovered={props.servicesHovered}
+        contactOpen={props.contactOpen}
+      >
+        <Hero 
+          title={ switchText( titleEn, titleJa ) }
+          subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
+          buttonText={buttonText}
+          toggleContactForm={props.toggleContactForm} 
+          bgImage={bgImage}
+        />
 
-      <div className={classes.pageContent}>
+        <div className={classes.pageContent}>
 
-        <div className={classes.centeredWrapper}>
-          <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
+          <div className={classes.centeredWrapper}>
+            <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
+          </div>
+
         </div>
 
-      </div>
+        <MktServicesOffered servicesOffered={pageData.servicesOffered.en} />
+          
 
-      <MktServicesOffered servicesOffered={pageData.servicesOffered.en} />
-        
-
-      <CallToActionSection 
-        text={pageData.callToAction} 
-        toggleContactForm={props.toggleContactForm} 
-      />
-        
-    </Layout>
+        <CallToActionSection 
+          text={pageData.callToAction} 
+          toggleContactForm={props.toggleContactForm} 
+        />
+          
+      </Layout>
+    </>
   )};
 
 

@@ -109,12 +109,12 @@ const ContactForm = props => {
   }
 
   const addSubmitListener = theForm => {
-    console.log('add listener');
+    // console.log('add listener');
 
     theForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const formData = getData();
-      console.log('form data', formData);
+      // console.log('form data', formData);
       let submitStatus = 'PENDING';
       fetch(`https://usebasin.com/f/b3b2da236c0c.json`, {
         method: 'POST',

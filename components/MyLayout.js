@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { Grid, Hidden } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
+import Footer from './Footer';
 
 // custom
 import NavMobile from './Nav/NavMobile';
@@ -87,6 +88,8 @@ const Layout = props => {
         <div className={classes.content}>
           {props.children}
         </div>        
+
+        <Footer />
 
       </div>
       </>

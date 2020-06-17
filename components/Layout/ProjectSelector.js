@@ -66,7 +66,7 @@ const ProjectSelector = props => {
     selectedProject: 'PKMASA Branding',
   });
 
-  console.log('props', props)
+  // console.log('props', props)
 
   const showProject = data => {
     setState({ 

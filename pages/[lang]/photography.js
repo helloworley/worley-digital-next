@@ -17,9 +17,11 @@ import { LocaleContext } from '../../context/LocaleContext';
 // custom
 import Layout from '../../components/MyLayout';
 import Hero from '../../components/Layout/Hero';
-import ServicesOffered from '../../components/Layout/ServicesOffered';
-import ServiceSelectTabBar from '../../components/Layout/ServiceSelectTabBar';
 import Gallery from '../../components/Layout/Gallery';
+import SEO from '../../components/SEO.js';
+import ContentfulToHTML from '../../components/ContentfulToHTML';
+import SectionHeading from '../../components/Layout/SectionHeading';
+
 
 // data
 import pageData from '../../data/pagePhotography.json';
@@ -72,12 +74,23 @@ const useStyles = makeStyles(theme => ({
   contentContainer: {
     maxWidth: '1260px',
     margin: '0 auto',
+    backgroundColor: '#4d4d4d',
   },
   centeredWrapper: {
-    textAlign: 'center',
+    // textAlign: 'center',
+    padding: '0 32px',
     [theme.breakpoints.up('md')]: {
-      textAlign: 'left'
+      textAlign: 'left',
+      padding: '0 32px',
     },
+    maxWidth: '800px',
+    margin: '80px auto',
+    '& img': {
+      margin: '40px 0'
+    },
+    '& p': {
+      textAlign: 'left',
+    }
   },
 }));
 
@@ -95,24 +108,42 @@ const Index = props => {
     return locale == 'en' ? textEn : textJa;
   }
 
-  return(
-    <Layout
-      locale={locale}
-      toggleContactForm={props.toggleContactForm} 
-      toggleServicesHovered={props.toggleServicesHovered}
-      servicesHovered={props.servicesHovered}
-      contactOpen={props.contactOpen}
-    >
-      <Hero 
-        title={ switchText( titleEn, titleJa ) }
-        subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
-        buttonText={buttonText}
-        toggleContactForm={props.toggleContactForm} 
-        bgImage={bgImage}
-      />
+  console.log('page data', pageData)
 
-      <Gallery elements={pageData.images.en} />
-    </Layout>
+  return(
+    <>
+      <SEO
+        titleEn={pageData.seo.en.fields.title.en}
+        titleJa={pageData.seo.en.fields.title.ja}
+        descriptionEn={pageData.seo.en.fields.description.en}
+        descriptionJa={pageData.seo.en.fields.description.ja}
+        slug={pageData.seo.en.fields.slug ? pageData.seo.en.fields.slug.en : ''}
+        image={pageData.seo.en.fields.image.en.fields.file.en.url}
+      />
+      <Layout
+        locale={locale}
+        toggleContactForm={props.toggleContactForm} 
+        toggleServicesHovered={props.toggleServicesHovered}
+        servicesHovered={props.servicesHovered}
+        contactOpen={props.contactOpen}
+      >
+        <Hero 
+          title={ switchText( titleEn, titleJa ) }
+          subtitle={ switchText( pageSubtitleEn, pageSubtitleJa ) }
+          buttonText={buttonText}
+          toggleContactForm={props.toggleContactForm} 
+          bgImage={bgImage}
+        />
+
+        <div className={classes.centeredWrapper}>
+          <ContentfulToHTML dataEn={pageData.content.en.content} dataJa={pageData.content.ja.content}/>
+        </div>
+
+        <SectionHeading titleEn="Gallery" titleJa="ギャラリー" />
+
+        <Gallery elements={pageData.images.en} />
+      </Layout>
+    </>
   )};
 
 

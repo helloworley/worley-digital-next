@@ -5,11 +5,6 @@ export default [
     image: ""
   },
   {
-    link: 'photography',
-    text: "photography",
-    image: ""
-  },
-  {
     link: 'marketing',
     text: "snsMarketing",
     image: ""
@@ -22,6 +17,11 @@ export default [
   {
     link: 'website-creation',
     text: "websiteCreation",
+    image: ""
+  },
+  {
+    link: 'photography',
+    text: "photography",
     image: ""
   },
 ]

@@ -19,6 +19,19 @@ const useStyles = makeStyles(theme => ({
       lineHeight: '1.8',
       margin: '0 0 32px',
       fontSize: '1em',
+      lineHeight: '1.8'
+    },
+    '& li p': {
+      margin: '0',
+    },
+    '& img': {
+      margin: '56px 0 24px'
+    },
+    '& h2': {
+      margin: '56px 0 16px'
+    },
+    '& h3': {
+      margin: '40px 0 16px'
     }
   },
 }));

@@ -9,20 +9,13 @@ const bgImage = '/hello.jpg';
 import { Grid, Button, Typography } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 
-// next
-import Link from 'next/link';
-
 // translation
-import useTranslation from '../../hooks/useTranslation';
 import withLocale from '../../hocs/withLocale';
 import { LocaleContext } from '../../context/LocaleContext';
 
-
 // custom
 import Layout from '../../components/MyLayout';
-import Hero from '../../components/Layout/Hero';
-import ServicesOffered from '../../components/Layout/ServicesOffered';
-
+import SEO from '../../components/SEO.js';
 
 
 const useStyles = makeStyles(theme => ({
@@ -126,57 +119,67 @@ const Index = props => {
   const classes = useStyles();
   const { locale } = React.useContext(LocaleContext);
 
-  console.log('data', data);
+  // console.log('data', data);
 
   const backgroundImage = {
     backgroundImage: `url(${data.heroBackground.en.fields.file.en.url})`,
   };
 
   return(
-    <Layout
-      locale={locale}
-      toggleContactForm={props.toggleContactForm} 
-      contactOpen={props.contactOpen}
-      toggleServicesHovered={props.toggleServicesHovered}
-      servicesHovered={props.servicesHovered}
-    >
-      <div className={classes.wrapper}>
-        <div className={classes.wrapperInner}>
-          <Grid container className={classes.contentContainer} spacing={2}>
-            <Grid item xs={12}>
-              <Typography variant="h1" className={`${classes.text} ${classes.h1}`} >
-                {data.title[locale]}
-              </Typography>
-              <Typography variant="h4" className={`${classes.text} ${classes.subtitle}`}>
-                {data.subtitle[locale].content[0].content[0].value}
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid container className={classes.contentContainer} spacing={6}>
-            <Grid item xs={12} md={8}>
-              <Typography variant="h2" className={`${classes.text} ${classes.h2}`} >
-                {data.paragraph1Title[locale]}
-              </Typography>
-              <Typography variant="body1" className={classes.text}>
-                {data.paragraph1[locale].content[0].content[0].value}
-              </Typography>
-              <Typography variant="h2" className={`${classes.text} ${classes.h2}`} >
-                {data.paragraph2Title[locale]}
-              </Typography>
-              <Typography variant="body1" className={classes.text}>
-                {data.paragraph2[locale].content[0].content[0].value}
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <img className={classes.image} src={data.image.en.fields.file.en.url} alt={data.image.en.fields.title.en}/>
-            </Grid>
-          </Grid>
-        </div>
-      </div>
-      <div className={classes.background} style={backgroundImage}>
-        <div className={classes.backgroundInner}></div>
-      </div>
-    </Layout>
+    <>
+      <SEO
+        titleEn={data.seo.en.fields.title.en}
+        titleJa={data.seo.en.fields.title.ja}
+        descriptionEn={data.seo.en.fields.description.en}
+        descriptionJa={data.seo.en.fields.description.ja}
+        slug={data.seo.en.fields.slug ? data.seo.en.fields.slug.en : ''}
+        image={data.seo.en.fields.image.en.fields.file.en.url}
+      />
+        <Layout
+          locale={locale}
+          toggleContactForm={props.toggleContactForm} 
+          contactOpen={props.contactOpen}
+          toggleServicesHovered={props.toggleServicesHovered}
+          servicesHovered={props.servicesHovered}
+        >
+          <div className={classes.wrapper}>
+            <div className={classes.wrapperInner}>
+              <Grid container className={classes.contentContainer} spacing={2}>
+                <Grid item xs={12}>
+                  <Typography variant="h1" className={`${classes.text} ${classes.h1}`} >
+                    {data.title[locale]}
+                  </Typography>
+                  <Typography variant="h4" className={`${classes.text} ${classes.subtitle}`}>
+                    {data.subtitle[locale].content[0].content[0].value}
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container className={classes.contentContainer} spacing={6}>
+                <Grid item xs={12} md={8}>
+                  <Typography variant="h2" className={`${classes.text} ${classes.h2}`} >
+                    {data.paragraph1Title[locale]}
+                  </Typography>
+                  <Typography variant="body1" className={classes.text}>
+                    {data.paragraph1[locale].content[0].content[0].value}
+                  </Typography>
+                  <Typography variant="h2" className={`${classes.text} ${classes.h2}`} >
+                    {data.paragraph2Title[locale]}
+                  </Typography>
+                  <Typography variant="body1" className={classes.text}>
+                    {data.paragraph2[locale].content[0].content[0].value}
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <img className={classes.image} src={data.image.en.fields.file.en.url} alt={data.image.en.fields.title.en}/>
+                </Grid>
+              </Grid>
+            </div>
+          </div>
+          <div className={classes.background} style={backgroundImage}>
+            <div className={classes.backgroundInner}></div>
+          </div>
+        </Layout>
+    </>
   )};
 
 export default withLocale(Index);

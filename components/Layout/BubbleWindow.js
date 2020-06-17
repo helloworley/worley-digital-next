@@ -49,7 +49,7 @@ class BubbleWindow extends React.Component {
   render() {
 
     const { classes } = this.props;
-    console.log('props', this.props.bg)
+    // console.log('props', this.props.bg)
 
     const imageStyle = {
       backgroundImage: `url("${this.props.bg}")`
