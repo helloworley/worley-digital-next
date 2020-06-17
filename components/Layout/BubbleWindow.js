@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 const styles = theme => createStyles({
   bubbleWindow: {
     cursor: 'pointer',
-    color: '#bbb',
+    color: '#A59A9A',
     '&:hover h4': {
       color: '#616161',
       transition: '.5s'

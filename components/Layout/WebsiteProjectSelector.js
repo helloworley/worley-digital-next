@@ -186,7 +186,9 @@ const ProjectSelectorWebsites = props => {
 
         <Grid item xs={12} md={3} className={classes.colOptions}>
           <Grid spacing={3} container className={classes.projectOptions}>
-            <h3 className={classes.selectHeading}>{switchText('Select a Project', 'プロジェクトを選んでください')}</h3>
+            <Grid item xs={12}>
+              <h3 className={classes.selectHeading}>{switchText('Select a Project', 'プロジェクトを選んでください')}</h3>
+            </Grid>
             {projectOptions}
           </Grid>
         </Grid>
