@@ -137,6 +137,7 @@ const Index = props => {
   const { t } = useTranslation();
   const { locale } = React.useContext(LocaleContext)
 
+  ///////////////////////////////////////////
   // switch the page section depending on user input
   const [state, setState] = React.useState({
     selectedSection: 'service',
@@ -151,8 +152,8 @@ const Index = props => {
 
   const pageSections = [
     {
-      titleEn: 'Service Overview',
-      titleJa: 'サービス概要'
+      titleEn: 'About UI UX Design',
+      titleJa: 'UI UXデザインについて'
     },
     {
       titleEn: 'Past UI UX Projects',

@@ -37,9 +37,13 @@ const useStyles = makeStyles(theme => ({
     },
   },
   text: {
+    fontSize: '.9em',
     margin: '0',
     fontWeight: 'bold',
     cursor: 'pointer',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.2em',
+    },
   }
 }));
 

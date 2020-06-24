@@ -1,11 +1,10 @@
 // react
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
 
 
 // material ui
-import { Paper, Tabs, Tab, Box, Typography } from '@material-ui/core/';
+import { Grid } from '@material-ui/core/';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 // translation
@@ -20,6 +19,7 @@ import CallToActionSection from '../../components/Layout/CallToActionSection';
 import WebsiteProjectSelector from '../../components/Layout/WebsiteProjectSelector';
 import SectionHeading from '../../components/Layout/SectionHeading';
 import SEO from '../../components/SEO.js';
+import ProjectSelectButton from '../../components/Layout/PageSelectButton';
 
 
 // data
@@ -140,58 +140,68 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
-  };
-}
-
 
 const Index = props => {
   const classes = useStyles();
-  const theme = useTheme();
   const { locale } = React.useContext(LocaleContext)
   const buttonText = 'homeFeatureButtonText';
-  const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
+  ///////////////////////////////////////////
+  // switch the page section depending on user input
+  const [state, setState] = React.useState({
+    selectedSection: 'service',
+  });
+
+  const showSection = title => {
+    setState({ 
+      ...state, 
+      selectedSection: title
+    });
+  }
+
+  const pageSections = [
+    {
+      titleEn: 'About Website Creation',
+      titleJa: 'ウェブサイト作成について'
+    },
+    {
+      titleEn: 'Past Website Projects',
+      titleJa: '過去のウェブサイトのプロジェクト'
+    },
+  ];
+
+  useEffect(() => {
+    // code to run on component mount
+    showSection(pageSections[0].titleEn)
+  }, [])
+
+  const displaySection = data => {
+    return data == state.selectedSection ? true : false;
+  }
+
+  // for visually discerning which project is selected in the ProjectCards
+  const checkSelectedSection = (sectionTitle, selectedStateTitle) => {
+    return sectionTitle == selectedStateTitle ? true : false;
+  }
+  //////////////////////////////////////////
+  
 
   const switchText = ( textEn, textJa ) => {
     return locale == 'en' ? textEn : textJa;
   }
+
+  const serviceOverview = (
+    <div className={classes.centeredWrapper}>
+      <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
+    </div>
+  );
+
+  const pastProjects = (
+    <div className={classes.contentContainer}>
+      <WebsiteProjectSelector projects={projects} />
+    </div>
+  );
 
 
   return(
@@ -221,14 +231,34 @@ const Index = props => {
 
         <div className={classes.pageContent}> 
           
-          <div className={classes.centeredWrapper}>
-            <ContentfulToHTML dataEn={pageData.pageContent.en.content} dataJa={pageData.pageContent.ja.content}/>
+          
+        {/* buttons for selecting the page section */}
+        <div className={classes.contentContainer}>
+            <Grid container spacing={4} style={{justifyContent: 'center'}}>
+              <Grid item xs={6} md={4}>
+                <ProjectSelectButton 
+                  showSection={showSection} 
+                  titleEn={pageSections[0].titleEn}
+                  titleJa={pageSections[0].titleJa}
+                  selected={checkSelectedSection(pageSections[0].titleEn, state.selectedSection)}
+                />
+              </Grid>
+              <Grid item xs={6} md={4}>
+                <ProjectSelectButton
+                  showSection={showSection} 
+                  titleEn={pageSections[1].titleEn}
+                  titleJa={pageSections[1].titleJa}
+                  selected={checkSelectedSection(pageSections[1].titleEn, state.selectedSection)}
+                />
+              </Grid>
+            </Grid>
           </div>
-        
-          <div className={classes.contentContainer}>
-            <SectionHeading titleEn="Past Website Projects" titleJa="過去のウェブサイトプロジェクト" />
-            <WebsiteProjectSelector projects={projects} />
-          </div>
+
+          {/* page sections */}
+          { displaySection(pageSections[0].titleEn) ? serviceOverview : null }
+          { displaySection(pageSections[1].titleEn) ? pastProjects : null }
+
+          
           
         </div>
       
