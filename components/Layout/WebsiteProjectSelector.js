@@ -16,7 +16,10 @@ import WebsiteTechCard from './WebsiteTechCard.js';
 
 const useStyles = makeStyles(theme => ({
   wrapper: {
-    margin: '80px 0 120px',
+    margin: '0 0 120px',
+    [theme.breakpoints.up('md')]: {
+      margin: '80px 0 120px',
+    }
   },
   contentContainer: {
     [theme.breakpoints.up('sm')]: {

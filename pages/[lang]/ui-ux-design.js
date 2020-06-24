@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // material ui
 import { Grid, Button, Typography } from '@material-ui/core/';
@@ -20,6 +20,7 @@ import ContentfulToHTML from '../../components/ContentfulToHTML';
 import UIUXProjectSelector from '../../components/Layout/UIUXProjectSelector';
 import SectionHeading from '../../components/Layout/SectionHeading';
 import SEO from '../../components/SEO.js';
+import ProjectSelectButton from '../../components/Layout/PageSelectButton';
 
 
 // data
@@ -30,11 +31,13 @@ const titleJa = pageData.pageTitle.ja;
 const pageSubtitleEn = pageData.pageSubtitle.en;
 const pageSubtitleJa = pageData.pageSubtitle.ja;
 
+import projectSnapHabit from '../../data/uxUiProject-snaphabit.json';
 import projectBudgeting from '../../data/uxUiProject-budgeting.json';
 import projectCunard from '../../data/uxUiProject-cunard.json';
 import projectRakuchat from '../../data/uxUiProject-rakuchat.json';
 
 const projects = [
+  projectSnapHabit,
   projectBudgeting,
   projectCunard,
   projectRakuchat,
@@ -124,7 +127,7 @@ const useStyles = makeStyles(theme => ({
     },
     '& h3': {
       margin: '40px 0 16px'
-    }
+    },
   }
 }));
 
@@ -134,6 +137,44 @@ const Index = props => {
   const { t } = useTranslation();
   const { locale } = React.useContext(LocaleContext)
 
+  // switch the page section depending on user input
+  const [state, setState] = React.useState({
+    selectedSection: 'service',
+  });
+
+  const showSection = title => {
+    setState({ 
+      ...state, 
+      selectedSection: title
+    });
+  }
+
+  const pageSections = [
+    {
+      titleEn: 'Service Overview',
+      titleJa: 'サービス概要'
+    },
+    {
+      titleEn: 'Past UI UX Projects',
+      titleJa: '過去のUI UXのプロジェクト'
+    },
+  ];
+
+  useEffect(() => {
+    // code to run on component mount
+    showSection(pageSections[0].titleEn)
+  }, [])
+
+  const displaySection = data => {
+    return data == state.selectedSection ? true : false;
+  }
+
+  // for visually discerning which project is selected in the ProjectCards
+  const checkSelectedSection = (sectionTitle, selectedStateTitle) => {
+    return sectionTitle == selectedStateTitle ? true : false;
+  }
+  //////////////////////////////////////////
+
   const title = 'branding';
   const subtitle = 'homeFeatureSubtitle';
   const buttonText = 'homeFeatureButtonText';
@@ -141,6 +182,22 @@ const Index = props => {
   const switchText = ( textEn, textJa ) => {
     return locale == 'en' ? textEn : textJa;
   }
+
+
+
+  const serviceOverview = (
+    <div className={classes.centeredWrapper}>
+      <ContentfulToHTML dataEn={pageData.content.en.content} dataJa={pageData.content.ja.content}/>
+    </div>
+  );
+
+  const pastProjects = (
+    <div className={classes.contentContainer}>
+      {/* <SectionHeading titleEn="Past UI UX Projects" titleJa="過去のUI UXプロジェクト" /> */}
+      <UIUXProjectSelector projects={projects} />
+    </div>
+  );
+
 
   return(
     <>
@@ -169,14 +226,33 @@ const Index = props => {
 
         <div className={classes.pageContent}>
 
-          <div className={classes.centeredWrapper}>
-            <ContentfulToHTML dataEn={pageData.content.en.content} dataJa={pageData.content.ja.content}/>
-          </div>
-        
+          {/* buttons for selecting the page section */}
           <div className={classes.contentContainer}>
-            <SectionHeading titleEn="Past UI UX Projects" titleJa="過去のUI UXプロジェクト" />
-            <UIUXProjectSelector projects={projects} />
+            <Grid container spacing={4} style={{justifyContent: 'center'}}>
+              <Grid item xs={6} md={4}>
+                <ProjectSelectButton 
+                  showSection={showSection} 
+                  titleEn={pageSections[0].titleEn}
+                  titleJa={pageSections[0].titleJa}
+                  selected={checkSelectedSection(pageSections[0].titleEn, state.selectedSection)}
+                />
+              </Grid>
+              <Grid item xs={6} md={4}>
+                <ProjectSelectButton
+                  showSection={showSection} 
+                  titleEn={pageSections[1].titleEn}
+                  titleJa={pageSections[1].titleJa}
+                  selected={checkSelectedSection(pageSections[1].titleEn, state.selectedSection)}
+                />
+              </Grid>
+            </Grid>
           </div>
+
+          {/* page sections */}
+          { displaySection(pageSections[0].titleEn) ? serviceOverview : null }
+          { displaySection(pageSections[1].titleEn) ? pastProjects : null }
+
+          
 
         </div>
           

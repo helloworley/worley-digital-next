@@ -1,8 +1,9 @@
 // react
 import React from 'react'
 
-// custom
+// material
 import { makeStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core/';
 
 // translation
 import { LocaleContext } from '../../context/LocaleContext';
@@ -11,10 +12,16 @@ const useStyles = makeStyles(theme => ({
   
   projectsTitle: {
     textAlign: 'center',
-    padding: '64px 0 24px',
+    padding: '0 0 24px',
+    [theme.breakpoints.up('sm')]: {
+      padding: '64px 0 24px',
+    }
   },
   heading: {
-    fontSize: '2.5em',
+    fontSize: '1.5em',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2.5em',
+    }
   }
 }));
 
@@ -30,7 +37,7 @@ const SectionHeading = props => {
 
   return(  
     <div className={classes.projectsTitle}>
-      <h1 className={classes.heading}>{switchText( props.titleEn, props.titleJa )}</h1>
+      <Typography variant="h1" className={classes.heading}>{switchText( props.titleEn, props.titleJa )}</Typography>
     </div>
   )};
 

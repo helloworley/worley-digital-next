@@ -14,7 +14,10 @@ import ContentfulToHTML from '../ContentfulToHTML.js';
 
 const useStyles = makeStyles(theme => ({
   wrapper: {
-    margin: '80px 0 120px',
+    margin: '0 0 120px',
+    [theme.breakpoints.up('md')]: {
+      margin: '80px 0 120px',
+    }
   },
   contentContainer: {
     [theme.breakpoints.up('sm')]: {
@@ -126,7 +129,7 @@ const UIUXProjectSelector = props => {
         <Grid item xs={12} md={3} className={classes.colOptions}>
           <Grid spacing={3} container className={classes.projectOptions}>
             <Grid item xs={12}>
-              <h3 className={classes.selectHeading}>{switchText('Select a Project', 'プロジェクトを選んでください')}</h3>
+              <Typography variant="h3" className={classes.selectHeading}>{switchText('Select a Project', 'プロジェクトを選んでください')}</Typography>
             </Grid>
             {projectOptions}
           </Grid>
